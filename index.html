@@ -4,9 +4,101 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://kit.fontawesome.com/2641d7b74b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div class="content-wrapper">
+        <header class="header">
+            <input type="text" placeholder="Search location">
+            <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        </header>
+        <main class="main">
+            <section class="current-temp-section">
+                <img src="https://bmcdn.nl/assets/weather-icons/v2.0/fill/clear-day.svg" alt="Partly Cloudy Day" height="100"/>
+                <h1 class="current-temp">6&deg;</h1>
+                <p class="current-location"><i class="fa-solid fa-location-dot"></i>Stockholm</p>
+            </section>
+            <section class="t-w-h-temp-section">
+                <h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
+                <input type="radio" name="view" id="radioToday">
+                <label for="radioToday">Today</label>
+                <input type="radio" name="view" id="radioWeek">
+                <label for="radioWeek">Week</label>
+                <input type="radio" name="view" id="radioHour">
+                <label for="radioHour">Hourly</label>
+                <div class="weather-info-today">
+                    <p class="max-temp">Max 30&deg;</p>
+                    <p class="min-temp">Min 20&deg;</p>
+                    <div>
+                        <img src="icons/wi_sunrise.svg" alt="" height="48">
+                        <p class="sunrise-text">Sunrise</p>
+                        <p class="sunrise-time">05:30</p>
+                    </div>
+                    <div>
+                        <img src="icons/wi_sunset.svg" alt="" height="48">
+                        <p class="sunset-text">Sunset</p>
+                        <p class="sunset-time">21:00</p>
+                    </div>
+                </div>
+                <div class="weather-info-week">
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                    <ul class="week-forcast-today">
+                        <li class="weekday">Today</li>
+                        <li class="min-temp">20&deg;</li>
+                        <li class="max-temp">30&deg;</li>
+                        <li class="weather-icon"><i class="fa-solid fa-sun"></i></li>
+                        <li class="precipitation">12%</li>
+                    </ul>
+                </div>
+                <div class="wether-info-hourly">Carousel coming soon
+                    <!-- KARUSELL -->
+                </div>
+            </section>
+        </main>
+        
+    </div>
 </body>
 </html>
