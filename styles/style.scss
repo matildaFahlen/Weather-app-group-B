@@ -1,10 +1,8 @@
-* {
-	padding: 0;
-	margin: 0;
-}
+@use "./colors.scss";
+@use "./reset.scss";
 
 body {
-	background: linear-gradient(hsl(200, 100, 80%), hsl(200, 100, 30%));
+	background: linear-gradient(180deg, var(--clr-light), var(--clr-dark));
 	height: 100vh;
 }
 
@@ -22,20 +20,44 @@ body {
 	justify-content: center;
 }
 
-h1 {
+.current-temp {
 	text-align: center;
 }
 
 .t-w-h-temp-section {
-	background-color: white;
+	background-color: var(--clr-white);
+	padding: 2rem;
+	border-radius: 8px;
 }
 
 ul {
-	list-style: none;
 	display: flex;
 	justify-content: space-between;
 }
 
 .hidden {
 	display: none;
+}
+
+.weather-info-week {
+	width: 100%;
+}
+
+.wrapper {
+	margin-top: 1rem;
+	border-radius: 8px;
+	border-style: none;
+	box-shadow: 2px 2px 4px rgb(190, 190, 190);
+	padding: 4px;
+	background-color: var(--clr-white);
+}
+
+input,
+button {
+	background-color: transparent;
+	border: 0;
+}
+
+.search-button {
+	margin-right: 8px;
 }

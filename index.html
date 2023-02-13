@@ -13,8 +13,10 @@
 	<body>
 		<div class="content-wrapper">
 			<header class="header">
-				<input type="text" placeholder="Search location" />
-				<button><i class="fa-solid fa-magnifying-glass"></i></button>
+				<div class="wrapper">
+					<input type="text" class="search-bar" placeholder="Search" />
+					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</div>
 			</header>
 			<main class="main">
 				<section class="current-temp-section">
@@ -50,7 +52,7 @@
 							<p class="sunset-time"></p>
 						</div>
 					</div>
-					<div class="weather-info-week hidden" id="weather-info-week"></div>
+					<table class="weather-info-week hidden" id="weather-info-week"></table>
 					<div class="weather-info-hourly hidden" id="weather-info-hourly"></div>
 				</section>
 			</main>
