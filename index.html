@@ -15,7 +15,7 @@
 			<header class="header">
 				<div class="wrapper">
 					<input type="text" class="search-bar" placeholder="Search" />
-					<button class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<button class="search-button" id="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
 				</div>
 			</header>
 			<main class="main">
@@ -27,7 +27,11 @@
 						height="150"
 					/>
 					<h1 class="current-temp">6&deg;</h1>
-					<p class="current-location"><i class="fa-solid fa-location-dot"></i>Stockholm</p>
+					<!-- lägg display flex -->
+					<div class="current-location-div">
+						<i class="fa-solid fa-location-dot"></i>
+						<p class="current-location"></i>Stockholm</p>
+					</div>
 				</section>
 				<section class="t-w-h-temp-section">
 					<h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
@@ -65,6 +69,7 @@
 				</section>
 			</main>
 			<script src="./javascript/timeForm.js"></script>
+			<script src="./javascript/searchForecast.js"></script>
 			<script src="./javascript/updateWeekUI.js"></script>
 			<script src="./javascript/updateTodayUI.js"></script>
 			<script src="./javascript/updateHourlyUI.js"></script>
