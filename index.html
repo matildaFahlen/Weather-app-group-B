@@ -32,13 +32,13 @@
 				<section class="t-w-h-temp-section">
 					<h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
 
-					<form name="timeForm">
-						<input checked type="radio" name="view" id="radioToday" />
-						<label for="radioToday">Today</label>
-						<input type="radio" name="view" id="radioWeek" />
-						<label for="radioWeek">Week</label>
-						<input type="radio" name="view" id="radioHour" />
-						<label for="radioHour">Hourly</label>
+					<form class="radio-wrapper" name="timeForm">
+						<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
+						<label class="radio-label" for="radioToday">Today</label>
+						<input class="radio-btn" type="radio" name="view" id="radioWeek" />
+						<label class="radio-label" for="radioWeek">Week</label>
+						<input class="radio-btn" type="radio" name="view" id="radioHour" />
+						<label class="radio-label" for="radioHour">Hourly</label>
 					</form>
 
 					<div class="weather-info-today" id="weather-info-today">
