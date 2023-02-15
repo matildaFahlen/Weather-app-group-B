@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(180deg, var(--clr-light), var(--clr-dark));
+	background: linear-gradient(180deg, $clr-light, $clr-dark);
 	height: 100vh;
 }
 
@@ -15,12 +15,12 @@ body {
 
 // SearchBar + Button
 .wrapper {
-	margin-top: var(--margin-XL);
-	border-radius: var(--border-radius-M);
+	margin-top: $margin-XL;
+	border-radius: $border-radius-M;
 	border-style: none;
-	box-shadow: 2px 2px 4px var(--clr-shadow);
-	padding: var(--padding-XS);
-	background-color: var(--clr-white);
+	box-shadow: 2px 2px 4px $lr-shadow;
+	padding: $padding-XS;
+	background-color: $clr-white;
 }
 
 input,
@@ -30,11 +30,11 @@ button {
 }
 
 .search-button {
-	margin-right: var(--margin-XS);
+	margin-right: $margin-XS;
 }
 
 .search-bar {
-	margin-left: var(--margin-XS);
+	margin-left: $margin-XS;
 }
 
 // Main
@@ -49,7 +49,7 @@ button {
 //Current Temp Section
 
 .current-temp-section {
-	margin-top: var(--margin-XL);
+	margin-top: $margin-XL;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -66,13 +66,13 @@ button {
 // t-w-h-temp-section
 
 .t-w-h-temp-section {
-	margin-top: var(--margin-XL);
-	background-color: var(--clr-white);
-	border-radius: var(--border-radius-S);
+	margin-top: $margin-XL;
+	background-color: $clr-white;
+	border-radius: $border-radius-S;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	padding: var(--padding-S);
+	padding: $padding-S;
 }
 
 ul {
@@ -86,7 +86,7 @@ ul {
 
 .sunrise,
 .sunset {
-	padding: var(--padding-S);
+	padding: $padding-S;
 }
 
 .temp-container {
@@ -97,5 +97,5 @@ ul {
 
 .max-temp,
 .min-temp {
-	margin: var(--margin-S);
+	margin: $margin-S;
 }
