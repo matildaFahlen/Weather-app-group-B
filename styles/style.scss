@@ -1,4 +1,4 @@
-@use "./colors.scss";
+@use "./variables.scss";
 @use "./reset.scss";
 
 body {
@@ -6,49 +6,23 @@ body {
 	height: 100vh;
 }
 
-.content-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-
-.current-temp {
-	text-align: center;
-}
-
-.t-w-h-temp-section {
-	background-color: var(--clr-white);
-	padding: 2rem;
-	border-radius: 8px;
-}
-
-ul {
-	display: flex;
-	justify-content: space-between;
-}
-
 .hidden {
 	display: none;
 }
 
-.weather-info-week {
-	width: 100%;
+.content-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
+// SearchBar + Button
 .wrapper {
-	margin-top: 1rem;
-	border-radius: 8px;
+	margin-top: var(--margin-XL);
+	border-radius: var(--border-radius-M);
 	border-style: none;
-	box-shadow: 2px 2px 4px rgb(190, 190, 190);
-	padding: 4px;
+	box-shadow: 2px 2px 4px var(--clr-shadow);
+	padding: var(--padding-XS);
 	background-color: var(--clr-white);
 }
 
@@ -59,5 +33,72 @@ button {
 }
 
 .search-button {
-	margin-right: 8px;
+	margin-right: var(--margin-XS);
+}
+
+.search-bar {
+	margin-left: var(--margin-XS);
+}
+
+// Main
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+//Current Temp Section
+
+.current-temp-section {
+	margin-top: var(--margin-XL);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.current-temp {
+	text-align: center;
+}
+
+.current-location {
+	text-align: center;
+}
+
+// t-w-h-temp-section
+
+.t-w-h-temp-section {
+	margin-top: var(--margin-XL);
+	background-color: var(--clr-white);
+	border-radius: var(--border-radius-S);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: var(--padding-S);
+}
+
+ul {
+	display: flex;
+	justify-content: space-between;
+}
+
+.sun-container {
+	display: flex;
+}
+
+.sunrise,
+.sunset {
+	padding: var(--padding-S);
+}
+
+.temp-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.max-temp,
+.min-temp {
+	margin: var(--margin-S);
 }

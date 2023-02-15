@@ -4,15 +4,15 @@ const setWeekUILoading = () => {
 	weekContainer.innerText = "Loading...";
 };
 
-const updateWeekUI = (data) => {
+const updateWeekUI = (forecastData) => {
 	weekContainer.innerText = "";
 	const tableBody = document.createElement("tbody");
 
-	for (let i = 0; i < data.daily.time.length; i++) {
-		const date = data.daily.time[i];
-		const min = data.daily.temperature_2m_min[i];
-		const max = data.daily.temperature_2m_max[i];
-		const precipitation = data.daily.precipitation_sum[i];
+	for (let i = 0; i < forecastData.daily.time.length; i++) {
+		const date = forecastData.daily.time[i];
+		const min = forecastData.daily.temperature_2m_min[i];
+		const max = forecastData.daily.temperature_2m_max[i];
+		const precipitation = forecastData.daily.precipitation_sum[i];
 
 		const listElement = document.createElement("tr");
 		listElement.classList.add("week-forcast-today");
@@ -46,7 +46,7 @@ const updateWeekUI = (data) => {
 
 		const precipitationElement = document.createElement("td");
 		precipitationElement.classList.add("precipitation");
-		precipitationElement.innerText = `${precipitation.toFixed(1)}mm`;
+		precipitationElement.innerText = `${precipitation.toFixed(1)}%`;
 		listElement.append(precipitationElement);
 
 		tableBody.append(listElement);

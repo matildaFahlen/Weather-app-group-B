@@ -19,17 +19,19 @@
 				</div>
 			</header>
 			<main class="main">
-				<section class="current-temp-section">
+				<section class="current-temp-section" id="current-temp-section">
 					<img
+						id="weather-code"
 						src="https://bmcdn.nl/assets/weather-icons/v2.0/fill/clear-day.svg"
 						alt="Partly Cloudy Day"
-						height="100"
+						height="150"
 					/>
 					<h1 class="current-temp">6&deg;</h1>
 					<p class="current-location"><i class="fa-solid fa-location-dot"></i>Stockholm</p>
 				</section>
 				<section class="t-w-h-temp-section">
 					<h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
+
 					<form name="timeForm">
 						<input checked type="radio" name="view" id="radioToday" />
 						<label for="radioToday">Today</label>
@@ -38,18 +40,24 @@
 						<input type="radio" name="view" id="radioHour" />
 						<label for="radioHour">Hourly</label>
 					</form>
+
 					<div class="weather-info-today" id="weather-info-today">
-						<p class="max-temp"></p>
-						<p class="min-temp"></p>
-						<div>
-							<img src="icons/wi_sunrise.svg" alt="" height="48" />
-							<p class="sunrise-text">Sunrise</p>
-							<p class="sunrise-time"></p>
+						<div class="temp-container">
+							<p class="max-temp"></p>
+							<p class="min-temp"></p>
 						</div>
-						<div>
-							<img src="icons/wi_sunset.svg" alt="" height="48" />
-							<p class="sunset-text">Sunset</p>
-							<p class="sunset-time"></p>
+
+						<div class="sun-container">
+							<div class="sunrise">
+								<img src="icons/wi_sunrise.svg" alt="" height="55" />
+								<p class="sunrise-text">Sunrise</p>
+								<p class="sunrise-time"></p>
+							</div>
+							<div class="sunset">
+								<img src="icons/wi_sunset.svg" alt="" height="55" />
+								<p class="sunset-text">Sunset</p>
+								<p class="sunset-time"></p>
+							</div>
 						</div>
 					</div>
 					<table class="weather-info-week hidden" id="weather-info-week"></table>
@@ -61,6 +69,8 @@
 			<script src="updateTodayUI.js"></script>
 			<script src="updateHourlyUI.js"></script>
 			<script src="script.js"></script>
+			<script src="updateWeatherCodeUI.js"></script>
+			<script src="updateCurrentTemp.js"></script>
 		</div>
 	</body>
 </html>

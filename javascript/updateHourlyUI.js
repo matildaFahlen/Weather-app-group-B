@@ -4,7 +4,7 @@ const setHourlyUILoading = () => {
 	hourlyContainer.innerText = "Loading...";
 };
 
-const updateHourlyUI = (data) => {
-	console.log(data.hourly);
+const updateHourlyUI = (forecastData) => {
+	console.log(forecastData);
 	hourlyContainer.innerText = "Carousel coming soon...";
 };

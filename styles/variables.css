@@ -1,0 +1,33 @@
+:root {
+  --clr-dark: hsl(185, 77%, 78%);
+  --clr-light: hsl(191, 85%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-shadow: hsl(0, 0%, 63%);
+  --border-radius-XS: 4px;
+  --border-radius-S: 8px;
+  --border-radius-M: 12px;
+  --border-radius-L: 16px;
+  --border-radius-XL: 20px;
+  --padding-XS: 0.5rem;
+  --padding-S: 1rem;
+  --padding-M: 1.5rem;
+  --padding-L: 2rem;
+  --padding-XL: 3rem;
+  --margin-XS: 0.5rem;
+  --margin-S: 1rem;
+  --margin-M: 1.5rem;
+  --margin-L: 2rem;
+  --margin-XL: 3rem;
+  --ff-name: ;
+  --ff-name: ;
+  --ff-name: ;
+  --ff-name: ;
+  --fs-900: ;
+  --ff-800: ;
+  --ff-700: ;
+  --ff-600: ;
+  --ff-500: ;
+  --ff-400: ;
+  --ff-300: ;
+  --ff-200: ;
+}/*# sourceMappingURL=variables.css.map */
