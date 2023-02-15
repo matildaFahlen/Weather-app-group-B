@@ -113,6 +113,7 @@ body {
 .content-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -142,14 +143,15 @@ button {
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .current-temp-section {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -165,15 +167,18 @@ button {
   margin-top: 3rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
 }
 
 ul {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 .sun-container {
@@ -188,6 +193,7 @@ ul {
 .temp-container {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
 }
 

@@ -8,9 +8,7 @@ body {
 }
 
 .content-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex($direction: column, $align: center);
 }
 
 // SearchBar + Button
@@ -40,19 +38,14 @@ button {
 // Main
 
 .main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	@include flex(column, center, center);
 }
 
 //Current Temp Section
 
 .current-temp-section {
 	margin-top: $margin-XL;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex($direction: column, $align: center);
 }
 
 .current-temp {
@@ -69,15 +62,12 @@ button {
 	margin-top: $margin-XL;
 	background-color: $clr-white;
 	border-radius: $border-radius-S;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: $padding-S;
+	@include flex($direction: column, $align: center);
 }
 
 ul {
-	display: flex;
-	justify-content: space-between;
+	@include flex($justify: space-between);
 }
 
 .sun-container {
@@ -90,9 +80,7 @@ ul {
 }
 
 .temp-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex($direction: column, $align: center);
 }
 
 .max-temp,
