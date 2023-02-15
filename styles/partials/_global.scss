@@ -44,7 +44,7 @@ button {
 //Current Temp Section
 
 .current-temp-section {
-	margin-top: $margin-XL;
+	margin-top: $margin-M;
 	@include flex($direction: column, $align: center);
 }
 
@@ -59,7 +59,7 @@ button {
 // t-w-h-temp-section
 
 .t-w-h-temp-section {
-	margin-top: $margin-XL;
+	margin-top: $margin-M;
 	background-color: $clr-white;
 	border-radius: $border-radius-S;
 	padding: $padding-S;
@@ -86,4 +86,32 @@ ul {
 .max-temp,
 .min-temp {
 	margin: $margin-S;
+}
+
+.weather-info-week {
+	width: 100%;
+}
+
+.precipitation {
+	text-align: right;
+}
+
+.week-weather-icon {
+	width: 55px;
+	height: 40px;
+	object-fit: cover;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.trolling {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+
+.week-error-message {
+	width: 200px;
 }

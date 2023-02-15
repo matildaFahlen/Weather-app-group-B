@@ -102,7 +102,7 @@ weatherCodes = [
 		icon: "",
 	},
 	{
-		id: 89,
+		id: 80,
 		description: "Slight",
 		icon: "rain",
 	},
@@ -142,15 +142,35 @@ weatherCodes = [
 		description: "Thunderstorm with heavy Hail",
 		icon: "thunderstorms-rain",
 	},
+
+	{
+		id: 404,
+		description: "Error icon",
+		icon: "thunderstorms-night-extreme-snow",
+	},
+	{
+		id: -1,
+		description: "Loading icon",
+		icon: "rainbow-clear",
+	},
 ];
+
+const setWeatherCodeLoading = () => {
+	weatherImage.src = getWheatherIconUrl(-1);
+};
+
+const setWeatherCodeError = () => {
+	weatherImage.src = getWheatherIconUrl(404);
+};
 
 const getWheatherIconUrl = (weatherCode) => {
 	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;
-	return `../icons/wi_${icon}.svg`;
+	return `https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/${icon}.svg`;
 };
-// https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/
 
 const setWeatherCodeUI = (forecastData) => {
-	const weatherIcon = forecastData.daily.weathercode[0];
+	const now = new Date();
+	let hour = now.getHours();
+	const weatherIcon = forecastData.hourly.weathercode[hour];
 	weatherImage.src = getWheatherIconUrl(weatherIcon);
 };
