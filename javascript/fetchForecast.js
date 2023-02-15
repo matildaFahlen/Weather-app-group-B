@@ -21,6 +21,7 @@ const fetchForecast = (longitude, latitude, startDate, endDate) => {
 	searchParams.append("daily", "sunrise");
 	searchParams.append("daily", "sunset");
 	searchParams.append("daily", "precipitation_sum");
+	searchParams.append("daily", "weathercode");
 
 	const baseUrl = "https://api.open-meteo.com/v1/forecast";
 
