@@ -8,6 +8,7 @@ const setWeekUIError = () => {
 	weekContainer.innerText = "";
 	const rowElement = document.createElement("tr");
 	const cellElement = document.createElement("td");
+	cellElement.classList.add("week-error-message");
 	cellElement.innerText = "Could not retrieve weather information, please try again.";
 	rowElement.append(cellElement);
 	weekContainer.append(rowElement);
