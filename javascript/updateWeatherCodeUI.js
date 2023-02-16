@@ -99,7 +99,7 @@ weatherCodes = [
 	{
 		id: 77,
 		description: "",
-		icon: "",
+		icon: "rain",
 	},
 	{
 		id: 80,
