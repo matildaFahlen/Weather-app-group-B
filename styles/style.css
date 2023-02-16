@@ -181,6 +181,23 @@ input[type=radio]:checked + label {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+* h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+* .current-location {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+* label {
+  text-transform: uppercase;
+}
+* .max-temp,
+* .min-temp {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 html:focus-within {
@@ -215,16 +232,6 @@ body {
 html,
 body {
   height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 400;
 }
 
 body {
@@ -265,12 +272,10 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
