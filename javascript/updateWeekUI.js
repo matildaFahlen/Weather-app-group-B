@@ -4,6 +4,16 @@ const setWeekUILoading = () => {
 	weekContainer.innerText = "Loading...";
 };
 
+const setWeekUIError = () => {
+	weekContainer.innerText = "";
+	const rowElement = document.createElement("tr");
+	const cellElement = document.createElement("td");
+	cellElement.classList.add("week-error-message");
+	cellElement.innerText = "Could not retrieve weather information, please try again.";
+	rowElement.append(cellElement);
+	weekContainer.append(rowElement);
+};
+
 const updateWeekUI = (forecastData) => {
 	weekContainer.innerText = "";
 	const tableBody = document.createElement("tbody");
@@ -29,24 +39,27 @@ const updateWeekUI = (forecastData) => {
 
 		const minElement = document.createElement("td");
 		minElement.classList.add("min-temp");
-		minElement.innerText = `${min.toFixed(1)}°`;
+		minElement.innerText = `${min.toFixed(0)}°`;
 		listElement.append(minElement);
 
 		const maxElement = document.createElement("td");
 		maxElement.classList.add("max-temp");
-		maxElement.innerText = `${max.toFixed(1)}°`;
+		maxElement.innerText = `${max.toFixed(0)}°`;
 		listElement.append(maxElement);
 
-		const iconContainer = document.createElement("td");
-		iconContainer.classList.add("weather-icon");
-		const iconElement = document.createElement("i");
-		iconElement.classList.add("fa-solid", "fa-sun");
-		iconContainer.append(iconElement);
-		listElement.append(iconContainer);
+		const iconCell = document.createElement("td");
+		iconCell.classList.add("weather-icon");
+		const iconImage = document.createElement("img");
+		iconImage.classList.add("week-weather-icon");
+		const weatherIcon = forecastData.daily.weathercode[i];
+		// console.log(weatherIcon);
+		iconImage.src = getWheatherIconUrl(weatherIcon);
+		iconCell.append(iconImage);
+		listElement.append(iconCell);
 
 		const precipitationElement = document.createElement("td");
 		precipitationElement.classList.add("precipitation");
-		precipitationElement.innerText = `${precipitation.toFixed(1)}%`;
+		precipitationElement.innerText = `${precipitation.toFixed(1)}mm`;
 		listElement.append(precipitationElement);
 
 		tableBody.append(listElement);

@@ -14,14 +14,28 @@ const setTodayUILoading = () => {
 	sunsetElement.innerText = "Loading...";
 };
 
+const setTodayUIError = () => {
+	const maxElement = todayContainer.getElementsByClassName("max-temp")[0];
+	maxElement.innerText = `Max: 😵‍💫`;
+
+	const minElement = todayContainer.getElementsByClassName("min-temp")[0];
+	minElement.innerText = `Min: 😵`;
+
+	const sunriseElement = todayContainer.getElementsByClassName("sunrise-time")[0];
+	sunriseElement.innerText = "😴";
+
+	const sunsetElement = todayContainer.getElementsByClassName("sunset-time")[0];
+	sunsetElement.innerText = "🥱";
+};
+
 const updateTodayUI = (forecastData) => {
 	const maxElement = todayContainer.getElementsByClassName("max-temp")[0];
 	const max = forecastData.daily.temperature_2m_max[0]; // Tar index noll för dagens datum.
-	maxElement.innerText = `Max: ${max}°`;
+	maxElement.innerText = `Max: ${max.toFixed(0)}°`;
 
 	const minElement = todayContainer.getElementsByClassName("min-temp")[0];
 	const min = forecastData.daily.temperature_2m_min[0];
-	minElement.innerText = `Min: ${min}°`;
+	minElement.innerText = `Min: ${min.toFixed(0)}°`;
 
 	const sunriseElement = todayContainer.getElementsByClassName("sunrise-time")[0];
 	const sunrise = forecastData.daily.sunrise[0];

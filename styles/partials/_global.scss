@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(180deg, var(--clr-light), var(--clr-dark));
+	background: linear-gradient(180deg, $clr-light, $clr-dark);
 	height: 100vh;
 }
 
@@ -8,19 +8,17 @@ body {
 }
 
 .content-wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex($direction: column, $align: center);
 }
 
 // SearchBar + Button
 .wrapper {
-	margin-top: var(--margin-XL);
-	border-radius: var(--border-radius-M);
+	margin-top: $margin-XL;
+	border-radius: $border-radius-M;
 	border-style: none;
-	box-shadow: 2px 2px 4px var(--clr-shadow);
-	padding: var(--padding-XS);
-	background-color: var(--clr-white);
+	box-shadow: 2px 2px 4px $clr-shadow;
+	padding: $padding-XS;
+	background-color: $clr-white;
 }
 
 input,
@@ -30,29 +28,24 @@ button {
 }
 
 .search-button {
-	margin-right: var(--margin-XS);
+	margin-right: $margin-XS;
 }
 
 .search-bar {
-	margin-left: var(--margin-XS);
+	margin-left: $margin-XS;
 }
 
 // Main
 
 .main {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	@include flex(column, center, center);
 }
 
 //Current Temp Section
 
 .current-temp-section {
-	margin-top: var(--margin-XL);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	margin-top: $margin-M;
+	@include flex($direction: column, $align: center);
 }
 
 .current-temp {
@@ -66,18 +59,16 @@ button {
 // t-w-h-temp-section
 
 .t-w-h-temp-section {
-	margin-top: var(--margin-XL);
-	background-color: var(--clr-white);
-	border-radius: var(--border-radius-S);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: var(--padding-S);
+	width: 320px;
+	margin-top: $margin-M;
+	background-color: $clr-white;
+	border-radius: $border-radius-S;
+	padding: $padding-S;
+	@include flex($direction: column, $align: center);
 }
 
 ul {
-	display: flex;
-	justify-content: space-between;
+	@include flex($justify: space-between);
 }
 
 .sun-container {
@@ -86,16 +77,52 @@ ul {
 
 .sunrise,
 .sunset {
-	padding: var(--padding-S);
+	padding: $padding-S;
+	text-align: center;
 }
 
 .temp-container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	@include flex($direction: column, $align: center);
 }
 
 .max-temp,
 .min-temp {
-	margin: var(--margin-S);
+	margin: $margin-S;
+}
+
+.weather-info-week {
+	width: 100%;
+}
+
+.precipitation {
+	text-align: right;
+}
+
+.week-weather-icon {
+	width: 55px;
+	height: 40px;
+	object-fit: cover;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.trolling {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+
+.week-error-message {
+	width: 200px;
+}
+
+.sunrise-time,
+.sunset-time {
+	text-align: center;
+}
+
+.time-stamp {
+	margin-top: $margin-S;
 }

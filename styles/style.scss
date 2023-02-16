@@ -1,4 +1,6 @@
-@import "/styles/partials/variables";
-@import "/styles/partials/reset";
-@import "/styles/partials/global";
-
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/global";
+@import "partials/radiobuttons";
+@import "partials/reset";
+@import "partials/hourly";
