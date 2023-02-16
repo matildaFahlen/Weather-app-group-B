@@ -17,6 +17,7 @@ const fetchForecast = (longitude, latitude, startDate, endDate) => {
 
 	searchParams.append("hourly", "rain");
 	searchParams.append("hourly", "snowfall");
+	searchParams.append("hourly", "weathercode");
 	searchParams.append("daily", "temperature_2m_min");
 	searchParams.append("daily", "sunrise");
 	searchParams.append("daily", "sunset");
@@ -24,8 +25,12 @@ const fetchForecast = (longitude, latitude, startDate, endDate) => {
 	searchParams.append("daily", "weathercode");
 
 	const baseUrl = "https://api.open-meteo.com/v1/forecast";
-
 	const url = `${baseUrl}?${searchParams.toString()}`;
-
-	return fetch(url).then((res) => res.json());
+	return fetch(url).then((res) => {
+		if (res.status === 200) {
+			return res.json();
+		} else {
+			throw Error("error fetching data");
+		}
+	});
 };
