@@ -1,0 +1,14 @@
+// Max- and mintemp
+.temp-container {
+    @include flex($direction: column, $align: center);
+	.max-temp, .min-temp {
+        margin: $margin-S;
+	}
+}
+// Sunrise/sunset
+.sun-container {
+    display: flex;
+    .sunrise, .sunset {
+        padding: $padding-S;
+    }
+}

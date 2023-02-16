@@ -22,19 +22,15 @@ body {
   padding: 0.5rem;
   background-color: hsl(0deg, 0%, 100%);
 }
-
-input,
-button {
+.wrapper .search-bar {
+  margin-left: 0.5rem;
   background-color: transparent;
   border: 0;
 }
-
-.search-button {
+.wrapper .search-button {
   margin-right: 0.5rem;
-}
-
-.search-bar {
-  margin-left: 0.5rem;
+  background-color: transparent;
+  border: 0;
 }
 
 .main {
@@ -43,24 +39,20 @@ button {
   justify-content: center;
   align-items: center;
 }
-
-.current-temp-section {
+.main .current-temp-section {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-
-.current-temp {
+.main .current-temp-section .current-temp {
   text-align: center;
 }
-
-.current-location {
+.main .current-temp-section .current-location {
   text-align: center;
 }
-
-.t-w-h-temp-section {
+.main .t-w-h-temp-section {
   margin-top: 1.5rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
@@ -71,20 +63,33 @@ button {
   align-items: center;
 }
 
-ul {
+.radio-wrapper {
+  margin: 1rem;
+  background-color: hsl(0deg, 0%, 83%);
+  width: 90%;
+  height: 50px;
+  border-radius: 8px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+}
+.radio-wrapper .radio-btn {
+  height: 0px;
+  width: 0px;
+}
+.radio-wrapper .radio-label {
+  display: inline-block;
+  background-color: hsl(0deg, 0%, 83%);
+  border-radius: 8px;
+  color: hsl(185deg, 77%, 28%);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
 }
 
-.sun-container {
-  display: flex;
-}
-
-.sunrise,
-.sunset {
-  padding: 1rem;
+input[type=radio]:checked + label {
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .temp-container {
@@ -93,10 +98,15 @@ ul {
   justify-content: flex-start;
   align-items: center;
 }
-
-.max-temp,
-.min-temp {
+.temp-container .max-temp, .temp-container .min-temp {
   margin: 1rem;
+}
+
+.sun-container {
+  display: flex;
+}
+.sun-container .sunrise, .sun-container .sunset {
+  padding: 1rem;
 }
 
 .weather-info-week {
@@ -129,35 +139,53 @@ ul {
   width: 200px;
 }
 
-.radio-btn {
-  height: 0px;
-  width: 0px;
-}
-
-.radio-wrapper {
-  margin: 1rem;
-  background-color: hsl(0deg, 0%, 83%);
-  width: 90%;
-  height: 50px;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+.wrapper {
+  margin-top: 3rem;
+  border-radius: 12px;
+  border-style: none;
   box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
-}
-
-.radio-label {
-  display: inline-block;
-  background-color: hsl(0deg, 0%, 83%);
-  border-radius: 8px;
-  color: hsl(185deg, 77%, 28%);
-  padding: 0.6rem 1rem;
-  cursor: pointer;
-}
-
-input[type=radio]:checked + label {
+  padding: 0.5rem;
   background-color: hsl(0deg, 0%, 100%);
+}
+.wrapper .search-bar {
+  margin-left: 0.5rem;
+  background-color: transparent;
+  border: 0;
+}
+.wrapper .search-button {
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main .current-temp-section {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.main .current-temp-section .current-temp {
+  text-align: center;
+}
+.main .current-temp-section .current-location {
+  text-align: center;
+}
+.main .t-w-h-temp-section {
+  margin-top: 1.5rem;
+  background-color: hsl(0deg, 0%, 100%);
+  border-radius: 8px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 *,
@@ -254,10 +282,12 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
