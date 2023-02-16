@@ -135,6 +135,10 @@ ul {
   text-align: center;
 }
 
+.time-stamp {
+  margin-top: 1rem;
+}
+
 .radio-btn {
   height: 0px;
   width: 0px;
