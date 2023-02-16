@@ -78,6 +78,7 @@ ul {
 .sunrise,
 .sunset {
 	padding: $padding-S;
+	text-align: center;
 }
 
 .temp-container {
@@ -115,4 +116,13 @@ ul {
 
 .week-error-message {
 	width: 200px;
+}
+
+.sunrise-time,
+.sunset-time {
+	text-align: center;
+}
+
+.time-stamp {
+	margin-top: $margin-S;
 }

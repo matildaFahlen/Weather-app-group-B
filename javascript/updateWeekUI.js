@@ -39,12 +39,12 @@ const updateWeekUI = (forecastData) => {
 
 		const minElement = document.createElement("td");
 		minElement.classList.add("min-temp");
-		minElement.innerText = `${min.toFixed(1)}°`;
+		minElement.innerText = `${min.toFixed(0)}°`;
 		listElement.append(minElement);
 
 		const maxElement = document.createElement("td");
 		maxElement.classList.add("max-temp");
-		maxElement.innerText = `${max.toFixed(1)}°`;
+		maxElement.innerText = `${max.toFixed(0)}°`;
 		listElement.append(maxElement);
 
 		const iconCell = document.createElement("td");
@@ -52,7 +52,7 @@ const updateWeekUI = (forecastData) => {
 		const iconImage = document.createElement("img");
 		iconImage.classList.add("week-weather-icon");
 		const weatherIcon = forecastData.daily.weathercode[i];
-		console.log(weatherIcon);
+		// console.log(weatherIcon);
 		iconImage.src = getWheatherIconUrl(weatherIcon);
 		iconCell.append(iconImage);
 		listElement.append(iconCell);

@@ -86,6 +86,7 @@ ul {
 .sunrise,
 .sunset {
   padding: 1rem;
+  text-align: center;
 }
 
 .temp-container {
@@ -128,6 +129,15 @@ ul {
 
 .week-error-message {
   width: 200px;
+}
+
+.sunrise-time,
+.sunset-time {
+  text-align: center;
+}
+
+.time-stamp {
+  margin-top: 1rem;
 }
 
 .radio-btn {
