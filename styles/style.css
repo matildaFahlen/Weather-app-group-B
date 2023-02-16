@@ -14,55 +14,6 @@ body {
   align-items: center;
 }
 
-.wrapper {
-  margin-top: 3rem;
-  border-radius: 12px;
-  border-style: none;
-  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
-  padding: 0.5rem;
-  background-color: hsl(0deg, 0%, 100%);
-}
-.wrapper .search-bar {
-  margin-left: 0.5rem;
-  background-color: transparent;
-  border: 0;
-}
-.wrapper .search-button {
-  margin-right: 0.5rem;
-  background-color: transparent;
-  border: 0;
-}
-
-.main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.main .current-temp-section {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.main .current-temp-section .current-temp {
-  text-align: center;
-}
-.main .current-temp-section .current-location {
-  text-align: center;
-}
-.main .t-w-h-temp-section {
-  margin-top: 1.5rem;
-  background-color: hsl(0deg, 0%, 100%);
-  border-radius: 8px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .radio-wrapper {
   margin: 1rem;
   background-color: hsl(0deg, 0%, 83%);
