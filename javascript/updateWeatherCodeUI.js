@@ -98,8 +98,8 @@ weatherCodes = [
 	},
 	{
 		id: 77,
-		description: "",
-		icon: "rain",
+		description: "Snow Grains",
+		icon: "snow",
 	},
 	{
 		id: 80,
@@ -164,6 +164,7 @@ const setWeatherCodeError = () => {
 };
 
 const getWheatherIconUrl = (weatherCode) => {
+	console.log(weatherCode);
 	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;
 	return `https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/${icon}.svg`;
 };

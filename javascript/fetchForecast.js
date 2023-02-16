@@ -26,11 +26,25 @@ const fetchForecast = (longitude, latitude, startDate, endDate) => {
 
 	const baseUrl = "https://api.open-meteo.com/v1/forecast";
 	const url = `${baseUrl}?${searchParams.toString()}`;
-	return fetch(url).then((res) => {
-		if (res.status === 200) {
-			return res.json();
-		} else {
-			throw Error("error fetching data");
-		}
-	});
+
+	// Set loading state
+	setUILoading();
+	// Fetch data
+	fetch(url)
+		.then((res) => {
+			if (res.status === 200) {
+				return res.json();
+			} else {
+				throw Error("error fetching data");
+			}
+		})
+		.then((forecastData) => {
+			// Update UI with data
+			updateForeCastUI(forecastData);
+		})
+		.catch((err) => {
+			console.error(err);
+			// Update UI with error
+			setUIError();
+		});
 };
