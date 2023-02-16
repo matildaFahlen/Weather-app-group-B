@@ -61,6 +61,7 @@ button {
 }
 
 .t-w-h-temp-section {
+  width: 320px;
   margin-top: 1.5rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
@@ -254,11 +255,48 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.weather-info-hourly {
+  height: auto;
+  width: 90%;
+  border-radius: 8px;
+  overscroll-behavior-x: contain;
+  overflow-x: auto;
+}
+
+.div-hourly {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hourly-forcast-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.hourly-weather-icon {
+  height: 40px;
+  width: auto;
 }/*# sourceMappingURL=style.css.map */

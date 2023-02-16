@@ -47,6 +47,11 @@ weatherCodes = [
 		icon: "drizzle",
 	},
 	{
+		id: 55,
+		description: "Drizzle",
+		icon: "drizzle",
+	},
+	{
 		id: 56,
 		description: "",
 		icon: "",
