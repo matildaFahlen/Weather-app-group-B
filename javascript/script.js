@@ -6,6 +6,7 @@ setTodayUILoading();
 setHourlyUILoading();
 setWeatherCodeLoading();
 setCurrentTempLoading();
+setTimeStampLoading();
 
 fetchLocation()
 	.then((locationData) => {
@@ -18,6 +19,7 @@ fetchLocation()
 				updateHourlyUI(forecastData);
 				setWeatherCodeUI(forecastData);
 				updateCurrentTemp(forecastData);
+				updateTimeStamp(forecastData);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -26,6 +28,7 @@ fetchLocation()
 				setTodayUIError();
 				setWeatherCodeError();
 				setWeekUIError();
+				setTimeStampError();
 			});
 	})
 	.catch((err) => {
