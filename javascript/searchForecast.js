@@ -8,6 +8,5 @@ async function getSearchedLocation(input) {
     return data;
 }
 
-// är det api parametrarna so mgör att det är samma tidszon hela tiden?
-// 
+
 

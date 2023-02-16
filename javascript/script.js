@@ -3,6 +3,7 @@ const endDate = undefined;
 
 
 
+
 setWeekUILoading();
 setTodayUILoading();
 setHourlyUILoading();
@@ -11,12 +12,11 @@ fetchLocation().then((locationData) => {
 if(submit) {
 	submit.addEventListener("click", () => {
 		const currentVal = search.value;
-	
+
 		getSearchedLocation(currentVal).then((data) => {
 			const latitude  = data.results[0].latitude;
 			const longitude = data.results[0].longitude;
-			const currentLocation = data.results[0].name;
-			locationContainer.innerHTML = ` ${currentLocation}`
+			
 			
 			fetchForecast(longitude, latitude, startDate, endDate).then((forecastData) => {
 				updateWeekUI(forecastData);
@@ -24,10 +24,11 @@ if(submit) {
 				updateHourlyUI(forecastData);
 				setWeatherCodeUI(forecastData);
 				updateCurrentTemp(forecastData);
+				updateCurrentTempSearched(data);
 			});
 		})
 	})
-} else {
+} 
 
 	const longitude = locationData.coords.longitude;
 	const latitude = locationData.coords.latitude;
@@ -38,5 +39,4 @@ if(submit) {
 		setWeatherCodeUI(forecastData);
 		updateCurrentTemp(forecastData);
 	});
-}
 });
