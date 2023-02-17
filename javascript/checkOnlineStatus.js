@@ -1,12 +1,7 @@
 let onlineStatus = document.getElementById("online-status");
 
 const checkOnlinestatus = async () => {
-    try {
-        const online = await fetch("./assets/test-pixel.png");
-        return online.status >= 200 && online.status < 300;
-    } catch (err) {
-        return false;
-    }
+    return navigator.onLine;  
 }
 
 setInterval(async () => {
