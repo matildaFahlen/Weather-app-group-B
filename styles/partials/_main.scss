@@ -1,0 +1,29 @@
+// Main (current location weather and info-box statics)
+.main {
+	@include flex(column, center, center);
+	.current-temp-section {
+		margin-top: $margin-M;
+		@include flex($direction: column, $align: center);
+		.current-temp {
+			text-align: center;
+		}
+		.current-location {
+			text-align: center;
+		}
+		.current-location-div {
+			width: 140px;
+			@include flex($align: center, $justify: center);
+			.fa-solid {
+				 margin-right: 5px;
+			}
+		}
+	}
+	.t-w-h-temp-section {
+		margin-top: $margin-M;
+		background-color: $clr-white;
+		border-radius: $border-radius-S;
+		padding: $padding-S;
+		width: 330px;
+		@include flex($direction: column, $align: center);
+	}
+}

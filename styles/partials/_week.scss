@@ -1,0 +1,28 @@
+// Week table
+.weather-info-week {
+	width: 100%;
+}
+
+.precipitation {
+	text-align: right;
+}
+
+.week-weather-icon {
+	width: 55px;
+	height: 40px;
+	object-fit: cover;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.trolling {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+
+.week-error-message {
+	width: 200px;
+}

@@ -1,7 +1,8 @@
-const fetchForecast = (longitude, latitude, startDate, endDate) => {
+const fetchForecast = (longitude, latitude, name, startDate, endDate) => {
 	const paramsObj = {
 		longitude,
 		latitude,
+		name,
 		start_date: startDate,
 		end_date: endDate,
 		hourly: "temperature_2m",
