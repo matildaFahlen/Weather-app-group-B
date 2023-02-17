@@ -13,6 +13,7 @@ function successFunction(position) {
     fetch(url)
         .then(response => response.json())
         .then(data => {
+            console.log(data)
             const city = data['locality'];
             const formattedCity = city.replace(' stadsdelsområde', '');
             locationText.innerHTML = formattedCity;
