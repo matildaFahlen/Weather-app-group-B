@@ -175,6 +175,7 @@ input[type=radio]:checked + label {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
+  width: 330px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
