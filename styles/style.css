@@ -174,8 +174,11 @@ input[type=radio]:checked + label {
   width: 140px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+}
+.main .current-temp-section .current-location-div .fa-solid {
+  margin-right: 5px;
 }
 .main .t-w-h-temp-section {
   margin-top: 1.5rem;
