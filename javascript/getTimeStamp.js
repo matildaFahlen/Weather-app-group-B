@@ -1,7 +1,5 @@
 const timeStamp = new Date();
 
-console.log(timeStamp.toTimeString());
-
 const timeStampContainer = document.getElementById("time-stamp-info");
 
 const setTimeStampLoading = () => {
@@ -16,5 +14,5 @@ const setTimeStampError = () => {
 
 const updateTimeStamp = () => {
 	const timeStampElement = timeStampContainer.getElementsByClassName("time-stamp")[0];
-	timeStampElement.innerText = `Prognos Utfärdad: ${timeStamp.toTimeString().slice(0, 5)}`;
+	timeStampElement.innerText = `Forecast issued: ${timeStamp.toTimeString().slice(0, 5)}`;
 };
