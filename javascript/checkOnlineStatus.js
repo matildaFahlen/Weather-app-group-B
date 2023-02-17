@@ -18,4 +18,4 @@ setInterval(async () => {
         console.log("online")
         onlineStatus.innerText = "";
     }
-}, 15000);
+}, 5000);
