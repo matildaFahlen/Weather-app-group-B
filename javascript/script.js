@@ -24,3 +24,14 @@ if (submit) {
 		});
 	});
 }
+
+var input = document.getElementById("myInput");
+
+if (input) {
+	input.addEventListener("keypress", function (event) {
+		if (event.key === "Enter") {
+			event.preventDefault();
+			document.getElementById("submit").click();
+		}
+	});
+}

@@ -1,6 +1,5 @@
 body {
   background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
-  height: 100vh;
 }
 
 .hidden {
@@ -156,6 +155,9 @@ input[type=radio]:checked + label {
   justify-content: center;
   align-items: center;
 }
+.main .weather-code {
+  height: 150;
+}
 .main .current-temp-section {
   margin-top: 1rem;
   display: flex;
@@ -248,11 +250,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 body {

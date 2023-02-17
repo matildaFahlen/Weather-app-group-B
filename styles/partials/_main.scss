@@ -1,5 +1,8 @@
 // Main (current location weather and info-box statics)
 .main {
+	.weather-code {
+		height: 150;
+	}
 	@include flex(column, center, center);
 	.current-temp-section {
 		margin-top: $margin-S;
