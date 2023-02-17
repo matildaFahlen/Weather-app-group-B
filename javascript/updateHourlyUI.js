@@ -31,7 +31,6 @@ const updateHourlyUI = (forecastData) => {
 		const iconImage = document.createElement("img");
 		iconImage.classList.add("hourly-weather-icon");
 		const weatherIcon = forecastData.hourly.weathercode[i];
-		console.log(weatherIcon);
 		iconImage.src = getWheatherIconUrl(weatherIcon);
 		iconElement.append(iconImage);
 		listElement.append(iconElement);

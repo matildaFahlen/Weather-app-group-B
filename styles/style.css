@@ -123,6 +123,7 @@ input[type=radio]:checked + label {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {
@@ -328,6 +329,7 @@ h6 {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {
