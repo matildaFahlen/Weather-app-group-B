@@ -170,6 +170,13 @@ input[type=radio]:checked + label {
 .main .current-temp-section .current-location {
   text-align: center;
 }
+.main .current-temp-section .current-location-div {
+  width: 140px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
 .main .t-w-h-temp-section {
   margin-top: 1.5rem;
   background-color: hsl(0deg, 0%, 100%);
