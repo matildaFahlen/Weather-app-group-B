@@ -60,6 +60,13 @@ button {
   text-align: center;
 }
 
+div.current-location-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .t-w-h-temp-section {
   width: 320px;
   margin-top: 1.5rem;
