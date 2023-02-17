@@ -12,7 +12,10 @@
 		}
 		.current-location-div {
 			width: 140px;
-			@include flex($align: center, $justify: space-between);
+			@include flex($align: center, $justify: center);
+			.fa-solid {
+				 margin-right: 5px;
+			}
 		}
 	}
 	.t-w-h-temp-section {
