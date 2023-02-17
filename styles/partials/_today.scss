@@ -10,5 +10,8 @@
     display: flex;
     .sunrise, .sunset {
         padding: $padding-S;
+        .sunrise-time, .sunset-time {
+            text-align: center;
+        }
     }
 }

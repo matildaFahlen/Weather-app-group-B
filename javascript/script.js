@@ -1,38 +1,26 @@
 const startDate = undefined;
 const endDate = undefined;
 
-setWeekUILoading();
-setTodayUILoading();
-setHourlyUILoading();
-setWeatherCodeLoading();
-setCurrentTempLoading();
-
+setUILoading();
 fetchLocation()
 	.then((locationData) => {
 		const longitude = locationData.coords.longitude;
 		const latitude = locationData.coords.latitude;
-		fetchForecast(longitude, latitude, startDate, endDate)
-			.then((forecastData) => {
-				updateWeekUI(forecastData);
-				updateTodayUI(forecastData);
-				updateHourlyUI(forecastData);
-				setWeatherCodeUI(forecastData);
-				updateCurrentTemp(forecastData);
-			})
-			.catch((err) => {
-				console.error(err);
-				setCurrentTempError();
-				setHourlyUIError();
-				setTodayUIError();
-				setWeatherCodeError();
-				setWeekUIError();
-			});
+		fetchForecast(longitude, latitude, startDate, endDate);
 	})
 	.catch((err) => {
 		console.error(err);
-		console.log("we get here?");
-		const image = document.createElement("img");
-		image.classList.add("trolling");
-		image.src = "https://media.tenor.com/FseuxhCywF4AAAAC/frodo-keep-your-secrets.gif";
-		document.body.append(image);
+		setLocationError();
 	});
+
+if (submit) {
+	submit.addEventListener("click", () => {
+		const currentVal = search.value;
+		getSearchedLocation(currentVal).then((data) => {
+			const latitude = data.results[0].latitude;
+			const longitude = data.results[0].longitude;
+			fetchForecast(longitude, latitude, startDate, endDate);
+			updateCurrentTempSearched(data);
+		});
+	});
+}

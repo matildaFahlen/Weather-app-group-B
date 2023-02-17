@@ -37,24 +37,29 @@ weatherCodes = [
 		icon: "drizzle",
 	},
 	{
-		id: 52,
-		description: "Drizzle",
-		icon: "drizzle",
-	},
-	{
 		id: 53,
 		description: "Drizzle",
 		icon: "drizzle",
 	},
 	{
+		id: 55,
+		description: "Drizzle",
+		icon: "drizzle",
+	},
+	{
+		id: 55,
+		description: "Drizzle",
+		icon: "drizzle",
+	},
+	{
 		id: 56,
-		description: "",
-		icon: "",
+		description: "Freezing drizzle",
+		icon: "sleet",
 	},
 	{
 		id: 57,
-		description: "",
-		icon: "",
+		description: "Freexing drizzle",
+		icon: "sleet",
 	},
 	{
 		id: 61,
@@ -98,8 +103,8 @@ weatherCodes = [
 	},
 	{
 		id: 77,
-		description: "",
-		icon: "",
+		description: "Snow Grains",
+		icon: "snow",
 	},
 	{
 		id: 80,
@@ -133,12 +138,12 @@ weatherCodes = [
 		icon: "thunderstorms",
 	},
 	{
-		id: 86,
+		id: 96,
 		description: "Thunderstorm with slight Hail",
 		icon: "thunderstorms-rain",
 	},
 	{
-		id: 86,
+		id: 99,
 		description: "Thunderstorm with heavy Hail",
 		icon: "thunderstorms-rain",
 	},
@@ -164,6 +169,7 @@ const setWeatherCodeError = () => {
 };
 
 const getWheatherIconUrl = (weatherCode) => {
+	console.log(weatherCode);
 	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;
 	return `https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/${icon}.svg`;
 };
@@ -171,6 +177,6 @@ const getWheatherIconUrl = (weatherCode) => {
 const setWeatherCodeUI = (forecastData) => {
 	const now = new Date();
 	let hour = now.getHours();
-	const weatherIcon = forecastData.hourly.weathercode[hour];
-	weatherImage.src = getWheatherIconUrl(weatherIcon);
+	const weatherCode = forecastData.hourly.weathercode[hour];
+	weatherImage.src = getWheatherIconUrl(weatherCode);
 };

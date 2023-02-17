@@ -14,6 +14,10 @@ body {
   align-items: center;
 }
 
+.time-stamp {
+  margin-top: 1rem;
+}
+
 .radio-wrapper {
   margin: 1rem;
   background-color: hsl(0deg, 0%, 83%);
@@ -59,6 +63,9 @@ input[type=radio]:checked + label {
 .sun-container .sunrise, .sun-container .sunset {
   padding: 1rem;
 }
+.sun-container .sunrise .sunrise-time, .sun-container .sunrise .sunset-time, .sun-container .sunset .sunrise-time, .sun-container .sunset .sunset-time {
+  text-align: center;
+}
 
 .weather-info-week {
   width: 100%;
@@ -88,6 +95,41 @@ input[type=radio]:checked + label {
 
 .week-error-message {
   width: 200px;
+}
+
+.weather-info-hourly {
+  height: auto;
+  width: 90%;
+  border-radius: 8px;
+  overscroll-behavior-x: contain;
+  overflow-x: auto;
+}
+.weather-info-hourly .div-hourly {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hourly-forcast-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.hourly-weather-icon {
+  height: 40px;
+  width: auto;
 }
 
 .wrapper {
@@ -149,6 +191,23 @@ input[type=radio]:checked + label {
   padding: 0;
   margin: 0;
   font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+* h1 {
+  font-weight: 600;
+  font-size: 2.25rem;
+}
+* .current-location {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+* label {
+  text-transform: uppercase;
+}
+* .max-temp,
+* .min-temp {
+  font-size: 1.25rem;
+  font-weight: 600;
 }
 
 html:focus-within {
@@ -183,16 +242,6 @@ body {
 html,
 body {
   height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 400;
 }
 
 body {
@@ -242,4 +291,38 @@ h6 {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+.weather-info-hourly {
+  height: auto;
+  width: 90%;
+  border-radius: 8px;
+  overscroll-behavior-x: contain;
+  overflow-x: auto;
+}
+.weather-info-hourly .div-hourly {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+}
+
+.tableBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.hourly-forcast-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+
+.hourly-weather-icon {
+  height: 40px;
+  width: auto;
 }/*# sourceMappingURL=style.css.map */

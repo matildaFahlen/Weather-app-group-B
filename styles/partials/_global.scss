@@ -11,3 +11,7 @@ body {
 .content-wrapper {
 	@include flex($direction: column, $align: center);
 }
+
+.time-stamp {
+	margin-top: $margin-S;
+}
