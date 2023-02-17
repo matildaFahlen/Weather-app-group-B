@@ -8,8 +8,8 @@
 
 * {
 	padding: 0;
-	margin: 0;
-	font-family: $quicksand;
+	margin: 0; 
+	@include font-style-3;
 }
 
 html:focus-within {
@@ -44,16 +44,6 @@ body {
 html,
 body {
 	height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-	font-weight: 400;
 }
 
 body {
