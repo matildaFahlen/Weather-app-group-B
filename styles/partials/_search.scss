@@ -1,0 +1,19 @@
+// SearchBar + SearchButton
+.wrapper {
+	margin-top: $margin-M;
+	border-radius: $border-radius-M;
+	border-style: none;
+	box-shadow: 2px 2px 4px $clr-shadow;
+	padding: $padding-XS;
+	background-color: $clr-white;
+	.search-bar {
+		margin-left: $margin-XS;
+		background-color: transparent;
+		border: 0;
+	}
+	.search-button {
+		margin-right: $margin-XS;
+		background-color: transparent;
+		border: 0;
+	}
+}

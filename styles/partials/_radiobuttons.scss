@@ -1,27 +1,25 @@
-.radio-btn {
-    height: 0px;
-    width: 0px;
-}
-
+// Today-Week-Hourly
 .radio-wrapper {
-    margin: $margin-S;
-    background-color: $clr-gray-light;
-    width: 90%;
-    height: 50px;
-    border-radius: $border-radius-S;
-    @include flex(row, space-evenly, center);
-    box-shadow: 2px 2px 4px $clr-shadow;
+	margin: $margin-S;
+	background-color: $clr-gray-light;
+	border-radius: $border-radius-S;
+	@include flex(row, space-evenly, center);
+	box-shadow: 2px 2px 4px $clr-shadow;
+	.radio-btn {
+		height: 0px;
+		width: 0px;
+	}
+	.radio-label {
+		display: inline-block;
+		background-color: $clr-gray-light;
+		border-radius: $border-radius-S;
+		color: $clr-dark-blue;
+		padding: 0.6rem 1rem;
+		cursor: pointer;
+		margin: 0.2rem;
+	}
 }
 
-.radio-label {
-    display: inline-block;
-    background-color: $clr-gray-light;
-    border-radius: $border-radius-S;
-    color: $clr-dark-blue; 
-    padding: 0.6rem 1.0rem;
-    cursor: pointer;
-}      
-
-input[type="radio"]:checked+label {
-    background-color: $clr-white;
+input[type="radio"]:checked + label {
+	background-color: $clr-white;
 }

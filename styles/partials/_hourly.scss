@@ -4,11 +4,10 @@
     border-radius: $border-radius-S;
     overscroll-behavior-x: contain;
     overflow-x: auto; 
-}
-
-.div-hourly {
-    @include flex (row);
-    padding: $padding-XS;
+    .div-hourly {
+        @include flex (row);
+        padding: $padding-XS;
+    }
 }
 
 .tableBody {
@@ -18,6 +17,7 @@
 .hourly-forcast-ul {
     @include flex (column, center, center);
     margin: $margin-XS;
+    width: 2.2rem;
 }
 
 .hourly-weather-icon {
