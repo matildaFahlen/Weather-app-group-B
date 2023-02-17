@@ -15,14 +15,12 @@ body {
 }
 
 .time-stamp {
-  margin-top: 1rem;
+  margin: 0.5rem;
 }
 
 .radio-wrapper {
   margin: 1rem;
   background-color: hsl(0deg, 0%, 83%);
-  width: 90%;
-  height: 50px;
   border-radius: 8px;
   display: flex;
   flex-direction: row;
@@ -41,6 +39,7 @@ body {
   color: hsl(185deg, 77%, 28%);
   padding: 0.6rem 1rem;
   cursor: pointer;
+  margin: 0.2rem;
 }
 
 input[type=radio]:checked + label {
@@ -133,7 +132,7 @@ input[type=radio]:checked + label {
 }
 
 .wrapper {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   border-radius: 12px;
   border-style: none;
   box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
@@ -158,7 +157,7 @@ input[type=radio]:checked + label {
   align-items: center;
 }
 .main .current-temp-section {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -171,6 +170,7 @@ input[type=radio]:checked + label {
   text-align: center;
 }
 .main .current-temp-section .current-location-div {
+  margin-top: 0.5rem;
   width: 140px;
   display: flex;
   flex-direction: row;
@@ -181,7 +181,7 @@ input[type=radio]:checked + label {
   margin-right: 5px;
 }
 .main .t-w-h-temp-section {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
