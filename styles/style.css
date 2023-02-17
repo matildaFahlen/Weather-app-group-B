@@ -1,6 +1,5 @@
 body {
   background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
-  height: 100vh;
 }
 
 .hidden {
@@ -124,6 +123,7 @@ input[type=radio]:checked + label {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {
@@ -248,11 +248,6 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   padding: 0;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 body {
