@@ -52,7 +52,6 @@ const updateWeekUI = (forecastData) => {
 		const iconImage = document.createElement("img");
 		iconImage.classList.add("week-weather-icon");
 		const weatherIcon = forecastData.daily.weathercode[i];
-		// console.log(weatherIcon);
 		iconImage.src = getWheatherIconUrl(weatherIcon);
 		iconCell.append(iconImage);
 		listElement.append(iconCell);

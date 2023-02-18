@@ -9,7 +9,7 @@ const setTimeStampLoading = () => {
 
 const setTimeStampError = () => {
 	const timeStampElement = timeStampContainer.getElementsByClassName("time-stamp")[0];
-	timeStampElement.innerText = `Error`;
+	timeStampElement.innerText = `Forecast issued: Error`;
 };
 
 const updateTimeStamp = () => {

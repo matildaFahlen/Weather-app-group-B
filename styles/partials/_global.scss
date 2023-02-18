@@ -14,3 +14,26 @@ body {
 .time-stamp {
 	margin: $margin-XS;
 }
+
+// Error handling
+
+.no-match {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	color: $clr-warning;
+	font-weight: $fw-600;
+}
+
+.trolling {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+
+div.current-location-div {
+	@include flex;
+}
