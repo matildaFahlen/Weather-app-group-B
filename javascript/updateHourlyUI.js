@@ -14,7 +14,7 @@ const updateHourlyUI = (forecastData) => {
 	const tableBody = document.createElement("div");
 	tableBody.classList.add("div-hourly");
 
-	for (let i = new Date().getHours(); i < 24; i++) {
+	for (let i = 0; i < 24; i++) {
 		const time = forecastData.hourly.time[i];
 		const temp = forecastData.hourly.temperature_2m[i];
 
