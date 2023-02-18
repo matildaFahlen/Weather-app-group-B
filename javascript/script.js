@@ -21,20 +21,18 @@ submitForm.onsubmit = (e) => {
 	const currentVal = search.value;
 	getSearchedLocation(currentVal)
 		.then((data) => {
-			if (data.results) {
-				const noMatchElement = document.getElementById("no-match-container");
-				noMatchElement.innerText = "";
-				const latitude = data.results[0].latitude;
-				const longitude = data.results[0].longitude;
+			const sortedResults = data?.results?.sort((a, b) => a.name?.length - b.name?.length);
+			const result = sortedResults?.find((result) => result.name && result.country);
+			if (result) {
+				const latitude = result.latitude;
+				const longitude = result.longitude;
 				fetchForecast(longitude, latitude, startDate, endDate);
-				updateCurrentTempSearched(data);
+				updateCurrentTempSearched(result);
 			} else {
-				const noMatchElement = document.getElementById("no-match");
-				noMatchElement.innerText = `No match for "${currentVal}"`;
+				errorPopupMessage(`No match for "${currentVal}"`);
 			}
 		})
 		.catch((err) => {
 			console.error(err);
-			console.log("Do we get here");
 		});
 };

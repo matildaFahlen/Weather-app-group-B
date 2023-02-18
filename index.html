@@ -16,13 +16,13 @@
 		<script src="./javascript/fetchLocation.js"></script>
 	</head>
 
-	<div class="no-match-container" id="no-match-container">
-		<p class="no-match" id="no-match"></p>
-	</div>
 	<body>
-		<!-- <div class="no-match-container" id="no-match-container">
-			<p class="no-match" id="no-match"></p>
-		</div> -->
+		<div class="error-message-container" id="error-message-container">
+			<p class="error-message" id="error-message">Test message</p>
+			<button type="submit" class="error-button" id="error-button">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
 		<div class="content-wrapper">
 			<header class="header">
 				<div class="wrapper">
@@ -98,6 +98,7 @@
 					<div class="online-status-info" id="online-status"></div>
 				</section>
 			</main>
+			<script src="./javascript/errorPopupMessage.js"></script>
 			<script src="./javascript/timeForm.js"></script>
 			<script src="./javascript/searchForecast.js"></script>
 			<script src="./javascript/updateWeekUI.js"></script>
