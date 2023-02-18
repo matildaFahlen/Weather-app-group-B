@@ -15,15 +15,23 @@
 		/>
 		<script src="./javascript/fetchLocation.js"></script>
 	</head>
-	<body>
+
+	<div class="no-match-container" id="no-match-container">
 		<p class="no-match" id="no-match"></p>
+	</div>
+	<body>
+		<!-- <div class="no-match-container" id="no-match-container">
+			<p class="no-match" id="no-match"></p>
+		</div> -->
 		<div class="content-wrapper">
 			<header class="header">
 				<div class="wrapper">
-					<input type="text" id="myInput" class="search-bar" placeholder="Search" />
-					<button class="search-button" id="submit">
-						<i class="fa-solid fa-magnifying-glass"></i>
-					</button>
+					<form id="submitForm">
+						<input type="text" id="myInput" class="search-bar" placeholder="Search" />
+						<button type="submit" class="search-button">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
 				</div>
 			</header>
 			<main class="main">
@@ -36,7 +44,7 @@
 					</div>
 				</section>
 				<section class="t-w-h-temp-section">
-					<h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
+					<h2 class="chosen-location">Loading...</h2>
 
 					<form class="radio-wrapper" name="timeForm">
 						<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
@@ -104,6 +112,7 @@
 			<script src="./javascript/setLocationError.js"></script>
 			<script src="./javascript/fetchForecast.js"></script>
 			<script src="./javascript/script.js"></script>
+			<script src="./javascript/positionText.js"></script>
 			<script src="./javascript/checkOnlineStatus.js"></script>
 		</div>
 	</body>

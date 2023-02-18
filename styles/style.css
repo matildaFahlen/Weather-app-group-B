@@ -35,6 +35,13 @@ body {
      object-fit: contain;
 }
 
+div.current-location-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 .radio-wrapper {
   margin: 1rem;
   background-color: hsl(0deg, 0%, 83%);
@@ -98,15 +105,6 @@ input[type=radio]:checked + label {
      object-fit: cover;
   margin-left: auto;
   margin-right: auto;
-}
-
-.trolling {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 
 .week-error-message {

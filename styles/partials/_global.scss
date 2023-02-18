@@ -33,3 +33,7 @@ body {
 	height: 100vh;
 	object-fit: contain;
 }
+
+div.current-location-div {
+	@include flex;
+}

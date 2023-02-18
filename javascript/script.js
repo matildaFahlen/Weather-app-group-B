@@ -13,37 +13,28 @@ fetchLocation()
 		setLocationError();
 	});
 
-if (submit) {
-	submit.addEventListener("click", () => {
-		const currentVal = search.value;
-		getSearchedLocation(currentVal)
-			.then((data) => {
-				if (data.results) {
-					const noMatchElement = document.getElementById("no-match");
-					noMatchElement.innerText = "";
-					const latitude = data.results[0].latitude;
-					const longitude = data.results[0].longitude;
-					fetchForecast(longitude, latitude, startDate, endDate);
-					updateCurrentTempSearched(data);
-				} else {
-					const noMatchElement = document.getElementById("no-match");
-					noMatchElement.innerText = `No match for "${currentVal}"`;
-				}
-			})
-			.catch((err) => {
-				console.error(err);
-				console.log("Do we get here");
-			});
-	});
-}
+const submitForm = document.getElementById("submitForm");
 
-var input = document.getElementById("myInput");
-
-if (input) {
-	input.addEventListener("keypress", function (event) {
-		if (event.key === "Enter") {
-			event.preventDefault();
-			document.getElementById("submit").click();
-		}
-	});
-}
+submitForm.onsubmit = (e) => {
+	e.preventDefault();
+	const search = document.querySelector(".search-bar");
+	const currentVal = search.value;
+	getSearchedLocation(currentVal)
+		.then((data) => {
+			if (data.results) {
+				const noMatchElement = document.getElementById("no-match-container");
+				noMatchElement.innerText = "";
+				const latitude = data.results[0].latitude;
+				const longitude = data.results[0].longitude;
+				fetchForecast(longitude, latitude, startDate, endDate);
+				updateCurrentTempSearched(data);
+			} else {
+				const noMatchElement = document.getElementById("no-match");
+				noMatchElement.innerText = `No match for "${currentVal}"`;
+			}
+		})
+		.catch((err) => {
+			console.error(err);
+			console.log("Do we get here");
+		});
+};
