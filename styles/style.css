@@ -167,6 +167,10 @@ input[type=radio]:checked + label {
   width: auto;
 }
 
+.precipitation-small {
+  font-size: 0.75rem;
+}
+
 .wrapper {
   margin-top: 1.5rem;
   border-radius: 12px;
@@ -371,4 +375,8 @@ h6 {
 .hourly-weather-icon {
   height: 40px;
   width: auto;
+}
+
+.precipitation-small {
+  font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */
