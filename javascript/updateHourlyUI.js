@@ -13,10 +13,13 @@ const updateHourlyUI = (forecastData) => {
 	hourlyContainer.innerText = "";
 	const tableBody = document.createElement("div");
 	tableBody.classList.add("div-hourly");
+	const startHour = new Date().getHours();
 
-	for (let i = 0; i < 24; i++) {
+
+	for (let i = startHour; i < 24 + startHour; i++) {
 		const time = forecastData.hourly.time[i];
 		const temp = forecastData.hourly.temperature_2m[i];
+		const precip = forecastData.hourly.precipitation[i];
 
 		const listElement = document.createElement("ul");
 		listElement.classList.add("hourly-forcast-ul");
@@ -39,6 +42,11 @@ const updateHourlyUI = (forecastData) => {
 		tempElement.classList.add("temp-hourly");
 		tempElement.innerText = `${temp.toFixed(0)}°`;
 		listElement.append(tempElement);
+
+		const precipElement = document.createElement("li");
+		precipElement.classList.add("precipitation-small");
+		precipElement.innerText = `${precip.toFixed(1)}mm`;
+		listElement.append(precipElement);
 		
 		tableBody.append(listElement);
 	}

@@ -124,11 +124,16 @@ input[type=radio]:checked + label {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {
   height: 40px;
   width: auto;
+}
+
+.precipitation-small {
+  font-size: 0.75rem;
 }
 
 .wrapper {
@@ -337,4 +342,8 @@ h6 {
 .hourly-weather-icon {
   height: 40px;
   width: auto;
+}
+
+.precipitation-small {
+  font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */
