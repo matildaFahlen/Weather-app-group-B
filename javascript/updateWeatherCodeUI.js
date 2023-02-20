@@ -169,7 +169,7 @@ const setWeatherCodeError = () => {
 };
 
 const getWheatherIconUrl = (weatherCode) => {
-	const icon = weatherCodes.find((code) => code.id === 3).icon;
+	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;
 	return `https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/${icon}.svg`;
 };
 

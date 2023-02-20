@@ -17,13 +17,33 @@ body {
   margin: 0.5rem;
 }
 
-.no-match {
+.error-message-container {
   position: fixed;
-  top: 0;
-  width: 100%;
-  text-align: center;
+  top: -50px;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: top 1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.error-message {
   color: hsl(0deg, 79%, 36%);
   font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.error-button {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: transparent;
+  border: 0;
+  border-style: none;
 }
 
 .trolling {
