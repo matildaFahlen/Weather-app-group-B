@@ -13,14 +13,25 @@ fetchLocation()
 		setLocationError();
 	});
 
-if (submit) {
-	submit.addEventListener("click", () => {
-		const currentVal = search.value;
-		getSearchedLocation(currentVal).then((data) => {
-			const latitude = data.results[0].latitude;
-			const longitude = data.results[0].longitude;
-			fetchForecast(longitude, latitude, startDate, endDate);
-			updateCurrentTempSearched(data);
+const submitForm = document.getElementById("submitForm");
+
+submitForm.onsubmit = (e) => {
+	e.preventDefault();
+	const search = document.querySelector(".search-bar");
+	const currentVal = search.value;
+	getSearchedLocation(currentVal)
+		.then((data) => {
+			const result = data?.results.find((result) => result.name && result.country);
+			if (result) {
+				const latitude = result.latitude;
+				const longitude = result.longitude;
+				fetchForecast(longitude, latitude, startDate, endDate);
+				updateCurrentTempSearched(result);
+			} else {
+				errorPopupMessage(`No match for "${currentVal}"`);
+			}
+		})
+		.catch((err) => {
+			console.error(err);
 		});
-	});
-}
+};

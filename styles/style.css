@@ -1,6 +1,5 @@
 body {
   background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
-  height: 100vh;
 }
 
 .hidden {
@@ -16,6 +15,51 @@ body {
 
 .time-stamp {
   margin: 0.5rem;
+}
+
+.error-message-container {
+  position: fixed;
+  top: -50px;
+  right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: top 1s;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.error-message {
+  color: hsl(0deg, 79%, 36%);
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.error-button {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: transparent;
+  border: 0;
+  border-style: none;
+}
+
+.trolling {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+div.current-location-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .radio-wrapper {
@@ -83,15 +127,6 @@ input[type=radio]:checked + label {
   margin-right: auto;
 }
 
-.trolling {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .week-error-message {
   width: 200px;
 }
@@ -124,6 +159,7 @@ input[type=radio]:checked + label {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {
@@ -155,6 +191,9 @@ input[type=radio]:checked + label {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.main .weather-code {
+  height: 150;
 }
 .main .current-temp-section {
   margin-top: 1rem;
@@ -250,11 +289,6 @@ body {
   padding: 0;
 }
 
-html,
-body {
-  height: 100%;
-}
-
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -331,6 +365,7 @@ h6 {
   justify-content: center;
   align-items: center;
   margin: 0.5rem;
+  width: 2.2rem;
 }
 
 .hourly-weather-icon {

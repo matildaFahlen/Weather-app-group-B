@@ -1,43 +1,43 @@
+// Colors
+$clr-dark: hsl(185, 77%, 78%);
+$clr-light: hsl(191, 85%, 97%);
+$clr-white: hsl(0, 0%, 100%);
+$clr-shadow: hsl(0, 0%, 63%);
+$clr-dark-blue: hsl(185, 77%, 28%);
+$clr-gray-light: hsl(0, 0%, 83%);
+$clr-warning: hsl(0, 79%, 36%);
 
-	// Colors
-	$clr-dark: hsl(185, 77%, 78%);
-	$clr-light: hsl(191, 85%, 97%);
-	$clr-white: hsl(0, 0%, 100%);
-	$clr-shadow: hsl(0, 0%, 63%);
-	$clr-dark-blue: hsl(185, 77%, 28%);
-	$clr-gray-light: hsl(0, 0%, 83%);
+// Border radius
+$border-radius-XS: 4px;
+$border-radius-S: 8px;
+$border-radius-M: 12px;
+$border-radius-L: 16px;
+$border-radius-XL: 20px;
 
-	// Border radius
-	$border-radius-XS: 4px;
-	$border-radius-S: 8px;
-	$border-radius-M: 12px;
-	$border-radius-L: 16px;
-	$border-radius-XL: 20px;
+// Padding
 
-	// Padding
+$padding-XS: 0.5rem;
+$padding-S: 1rem;
+$padding-M: 1.5rem;
+$padding-L: 2rem;
+$padding-XL: 3rem;
 
-	$padding-XS: 0.5rem;
-	$padding-S: 1rem;
-	$padding-M: 1.5rem;
-	$padding-L: 2rem;
-	$padding-XL: 3rem;
+// Margin
 
-	// Margin
+$margin-XS: 0.5rem;
+$margin-S: 1rem;
+$margin-M: 1.5rem;
+$margin-L: 2rem;
+$margin-XL: 3rem;
 
-	$margin-XS: 0.5rem;
-	$margin-S: 1rem;
-	$margin-M: 1.5rem;
-	$margin-L: 2rem;
-	$margin-XL: 3rem;
+// Font family
 
-	// Font family
+$quicksand: "Quicksand", sans-serif;
 
-	$quicksand: 'Quicksand', sans-serif;
-	
-	// Font size
+// Font size
 
-	$fw-700: 700;
-	$fw-600: 600;
-	$fw-500: 500;
-	$fw-400: 400;
-	$fw-300: 300;
+$fw-700: 700;
+$fw-600: 600;
+$fw-500: 500;
+$fw-400: 400;
+$fw-300: 300;
