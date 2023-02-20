@@ -21,7 +21,7 @@ submitForm.onsubmit = (e) => {
 	const currentVal = search.value;
 	getSearchedLocation(currentVal)
 		.then((data) => {
-			const result = data?.results.find((result) => result.name && result.country);
+			const result = data?.results?.find((result) => result.name && result.country);
 			if (result) {
 				const latitude = result.latitude;
 				const longitude = result.longitude;
