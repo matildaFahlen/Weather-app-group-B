@@ -17,3 +17,19 @@
 		border: 0;
 	}
 }
+li.search-result {
+	display: flex;
+	width: 300px;
+	height: 40px;
+	background-color: white;
+	padding-top: 5px;
+	text-align: center;
+	font-size: 16px;
+	border-radius: $border-radius-M;
+	box-shadow: 2px 2px 4px $clr-shadow;
+}
+img.flag {
+	height: 25px;
+	margin: 3px 10px 0 10px;
+	
+}

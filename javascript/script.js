@@ -14,10 +14,10 @@ fetchLocation()
 	});
 
 const submitForm = document.getElementById("submitForm");
+const search = document.querySelector('.search-bar');
 
 submitForm.onsubmit = (e) => {
 	e.preventDefault();
-	const search = document.querySelector(".search-bar");
 	const currentVal = search.value;
 	getSearchedLocation(currentVal)
 		.then((data) => {
@@ -35,3 +35,23 @@ submitForm.onsubmit = (e) => {
 			console.error(err);
 		});
 };
+
+search.addEventListener('input', () => {
+	const currentVal = search.value;
+	if (currentVal.length > 0) {
+	  getSearchedLocation(currentVal)
+		.then((data) => {
+		  const results = data?.results?.filter((result) => result.name && result.country);
+		  if (data && data.results && data.results.length > 0) {
+			updateSearchOptionsUI(results);
+		  } else {
+			outputDiv.innerHTML = '';
+		  }
+		})
+		.catch((err) => {
+		  console.error(err);
+		});
+	} else {
+	  outputDiv.innerHTML = '';
+	}
+  });
