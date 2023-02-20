@@ -13,8 +13,8 @@ const updateHourlyUI = (forecastData) => {
 	hourlyContainer.innerText = "";
 	const tableBody = document.createElement("div");
 	tableBody.classList.add("div-hourly");
-	const startHour = new Date().getHours();
 
+	const startHour = new Date().getHours();
 
 	for (let i = startHour; i < 24 + startHour; i++) {
 		const time = forecastData.hourly.time[i];
@@ -47,7 +47,7 @@ const updateHourlyUI = (forecastData) => {
 		precipElement.classList.add("precipitation-small");
 		precipElement.innerText = `${precip.toFixed(1)}mm`;
 		listElement.append(precipElement);
-		
+
 		tableBody.append(listElement);
 	}
 
