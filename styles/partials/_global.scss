@@ -1,7 +1,6 @@
 // General settings
 body {
 	background: linear-gradient(180deg, $clr-light, $clr-dark);
-	height: 100vh;
 }
 
 .hidden {
@@ -14,4 +13,44 @@ body {
 
 .time-stamp {
 	margin: $margin-XS;
+}
+
+// Error handling
+
+.error-message-container {
+	position: fixed;
+	top: -50px;
+	right: $margin-S;
+	padding: $margin-XS $margin-S;
+	background-color: white;
+	border-radius: $border-radius-S;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	transition: top 1s;
+	@include flex($justify: space-between);
+}
+
+.error-message {
+	color: $clr-warning;
+	font-weight: $fw-600;
+	margin-left: $margin-XS;
+}
+
+.error-button {
+	margin-right: $margin-XS;
+	margin-left: $margin-XS;
+	background-color: transparent;
+	border: 0;
+	border-style: none;
+}
+
+.trolling {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: contain;
+}
+
+div.current-location-div {
+	@include flex;
 }

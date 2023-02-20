@@ -15,26 +15,36 @@
 		/>
 		<script src="./javascript/fetchLocation.js"></script>
 	</head>
+
 	<body>
+		<div class="error-message-container" id="error-message-container">
+			<p class="error-message" id="error-message">Test message</p>
+			<button type="submit" class="error-button" id="error-button">
+				<i class="fa-solid fa-xmark"></i>
+			</button>
+		</div>
 		<div class="content-wrapper">
 			<header class="header">
 				<div class="wrapper">
-					<input type="text" class="search-bar" placeholder="Search" />
-					<button class="search-button" id="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+					<form id="submitForm">
+						<input type="text" id="myInput" class="search-bar" placeholder="Search" />
+						<button type="submit" class="search-button">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</button>
+					</form>
 				</div>
 			</header>
 			<main class="main">
 				<section class="current-temp-section" id="current-temp-section">
-					<img id="weather-code" height="150" />
-					<h1 class="current-temp">6&deg;</h1>
-					<!-- lägg display flex -->
+					<img id="weather-code" />
+					<h1 class="current-temp"></h1>
 					<div class="current-location-div">
 						<i class="fa-solid fa-location-dot"></i>
-						<p class="current-location"></i>Stockholm</p>
+						<p class="current-location">Stockholm</p>
 					</div>
 				</section>
 				<section class="t-w-h-temp-section">
-					<h2 class="chosen-location">Solna, Stockholm, Sweden</h2>
+					<h2 class="chosen-location">Loading...</h2>
 
 					<form class="radio-wrapper" name="timeForm">
 						<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
@@ -73,7 +83,9 @@
 						</div>
 					</div>
 					<table class="weather-info-week hidden" id="weather-info-week"></table>
-					<div class="weather-info-hourly hidden" id="weather-info-hourly"><div class="hourly-div"></div></div>
+					<div class="weather-info-hourly hidden" id="weather-info-hourly">
+						<div class="hourly-div"></div>
+					</div>
 				</section>
 				<section>
 					<div class="time-stamp-info" id="time-stamp-info">
@@ -86,6 +98,7 @@
 					<div class="online-status-info" id="online-status"></div>
 				</section>
 			</main>
+			<script src="./javascript/errorPopupMessage.js"></script>
 			<script src="./javascript/timeForm.js"></script>
 			<script src="./javascript/searchForecast.js"></script>
 			<script src="./javascript/updateWeekUI.js"></script>
@@ -100,6 +113,7 @@
 			<script src="./javascript/setLocationError.js"></script>
 			<script src="./javascript/fetchForecast.js"></script>
 			<script src="./javascript/script.js"></script>
+			<script src="./javascript/positionText.js"></script>
 			<script src="./javascript/checkOnlineStatus.js"></script>
 		</div>
 	</body>

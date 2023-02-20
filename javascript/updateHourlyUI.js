@@ -5,7 +5,7 @@ const setHourlyUILoading = () => {
 };
 
 const setHourlyUIError = () => {
-	hourlyContainer.innerText = "ERROR";
+	hourlyContainer.innerText = "Could not retrieve weather information, please try again.";
 };
 
 const updateHourlyUI = (forecastData) => {
@@ -37,7 +37,7 @@ const updateHourlyUI = (forecastData) => {
 		iconImage.src = getWheatherIconUrl(weatherIcon);
 		iconElement.append(iconImage);
 		listElement.append(iconElement);
-		
+
 		const tempElement = document.createElement("li");
 		tempElement.classList.add("temp-hourly");
 		tempElement.innerText = `${temp.toFixed(0)}°`;
@@ -50,6 +50,6 @@ const updateHourlyUI = (forecastData) => {
 		
 		tableBody.append(listElement);
 	}
-	
+
 	hourlyContainer.append(tableBody);
-}
+};
