@@ -13,7 +13,6 @@ const updateHourlyUI = (forecastData) => {
 	hourlyContainer.innerText = "";
 	const tableBody = document.createElement("div");
 	tableBody.classList.add("div-hourly");
-	const startHour = new Date().getHours();
 
 	const startHour = new Date().getHours();
 
