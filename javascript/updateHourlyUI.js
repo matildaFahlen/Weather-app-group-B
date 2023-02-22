@@ -9,7 +9,6 @@ const setHourlyUIError = () => {
 };
 
 const updateHourlyUI = (forecastData) => {
-	console.log(forecastData);
 	hourlyContainer.innerText = "";
 	const tableBody = document.createElement("div");
 	tableBody.classList.add("div-hourly");
@@ -20,6 +19,8 @@ const updateHourlyUI = (forecastData) => {
 		const time = forecastData.hourly.time[i];
 		const temp = forecastData.hourly.temperature_2m[i];
 		const precip = forecastData.hourly.precipitation[i];
+		const windSpeed = forecastData.hourly.windspeed_10m[i];	
+		const windDirection = forecastData.hourly.winddirection_10m[i];
 
 		const listElement = document.createElement("ul");
 		listElement.classList.add("hourly-forcast-ul");
@@ -47,6 +48,16 @@ const updateHourlyUI = (forecastData) => {
 		precipElement.classList.add("precipitation-small");
 		precipElement.innerText = `${precip.toFixed(1)}mm`;
 		listElement.append(precipElement);
+
+		const directionElement = document.createElement("li");
+		directionElement.innerHTML = `<i class="fa-solid fa-arrow-up wind-direction"></i>`;
+		directionElement.style.transform = `rotate(${windDirection}deg)`;
+		listElement.append(directionElement);
+
+		const windElement = document.createElement("li");
+		windElement.classList.add("wind-hourly");
+		windElement.innerHTML = `${(windSpeed/3.6).toFixed(1)}m/s`;
+		listElement.append(windElement);
 
 		tableBody.append(listElement);
 	}
