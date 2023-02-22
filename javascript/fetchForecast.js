@@ -20,6 +20,8 @@ const fetchForecast = (longitude, latitude, name, startDate, endDate) => {
 	searchParams.append("hourly", "snowfall");
 	searchParams.append("hourly", "weathercode");
 	searchParams.append("hourly", "precipitation");
+	searchParams.append("hourly", "windspeed_10m");
+	searchParams.append("hourly", "winddirection_10m");
 	searchParams.append("daily", "temperature_2m_min");
 	searchParams.append("daily", "sunrise");
 	searchParams.append("daily", "sunset");

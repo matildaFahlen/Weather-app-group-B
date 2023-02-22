@@ -171,6 +171,10 @@ input[type=radio]:checked + label {
   font-size: 0.75rem;
 }
 
+.wind-hourly {
+  font-size: 0.75rem;
+}
+
 .wrapper {
   margin-top: 1.5rem;
   border-radius: 12px;
@@ -355,10 +359,12 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -400,5 +406,9 @@ h6 {
 }
 
 .precipitation-small {
+  font-size: 0.75rem;
+}
+
+.wind-hourly {
   font-size: 0.75rem;
 }/*# sourceMappingURL=style.css.map */
