@@ -1,0 +1,16 @@
+@media (min-width: 650px) {
+    .section-wrapper {
+        @include flex(row, space-evenly, center);
+        width: 100vw;
+    }
+    .content-wrapper {
+        @include flex(column, space-between, center);
+        align-content: space-between;
+        height: 100vh;
+    }
+
+    .t-w-h-temp-section {
+        height: 440px;
+    }
+    
+}
