@@ -189,7 +189,7 @@ input[type=radio]:checked + label {
   border: 0;
 }
 .wrapper .search-button {
-  margin-right: 0.5rem;
+  margin-left: 5%;
   background-color: transparent;
   border: 0;
 }
@@ -197,7 +197,7 @@ input[type=radio]:checked + label {
 li.search-result {
   cursor: pointer;
   display: flex;
-  width: 300px;
+  width: 330px;
   height: 40px;
   background-color: hsl(0deg, 0%, 100%);
   padding-top: 5px;
@@ -216,6 +216,13 @@ li:hover {
 img.flag {
   height: 25px;
   margin: 3px 10px 0 10px;
+}
+
+form {
+  width: 100%;
+}
+form input {
+  width: 80%;
 }
 
 .main {
@@ -359,12 +366,10 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
