@@ -36,57 +36,59 @@
 				<div class="outputDiv"></div>
 			</header>
 			<main class="main">
-				<section class="current-temp-section" id="current-temp-section">
-					<img id="weather-code" />
-					<h1 class="current-temp"></h1>
-					<div class="current-location-div">
-						<i class="fa-solid fa-location-dot"></i>
-						<p class="current-location">Stockholm</p>
-					</div>
-				</section>
-				<section class="t-w-h-temp-section">
-					<h2 class="chosen-location">Loading...</h2>
-
-					<form class="radio-wrapper" name="timeForm">
-						<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
-						<label class="radio-label" for="radioToday">Today</label>
-						<input class="radio-btn" type="radio" name="view" id="radioWeek" />
-						<label class="radio-label" for="radioWeek">Week</label>
-						<input class="radio-btn" type="radio" name="view" id="radioHour" />
-						<label class="radio-label" for="radioHour">Hourly</label>
-					</form>
-
-					<div class="weather-info-today" id="weather-info-today">
-						<div class="temp-container">
-							<p class="max-temp"></p>
-							<p class="min-temp"></p>
+				<div class="section-wrapper">
+					<section class="current-temp-section" id="current-temp-section">
+						<img id="weather-code" style="width: 150px; height: auto;"/>
+						<h1 class="current-temp"></h1>
+						<div class="current-location-div">
+							<i class="fa-solid fa-location-dot"></i>
+							<p class="current-location">Stockholm</p>
 						</div>
+					</section>
+					<section class="t-w-h-temp-section">
+						<h2 class="chosen-location">Loading...</h2>
 
-						<div class="sun-container">
-							<div class="sunrise">
-								<img
-									src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunrise.svg"
-									alt=""
-									height="55"
-								/>
-								<p class="sunrise-text">Sunrise</p>
-								<p class="sunrise-time"></p>
+						<form class="radio-wrapper" name="timeForm">
+							<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
+							<label class="radio-label" for="radioToday">Today</label>
+							<input class="radio-btn" type="radio" name="view" id="radioWeek" />
+							<label class="radio-label" for="radioWeek">Week</label>
+							<input class="radio-btn" type="radio" name="view" id="radioHour" />
+							<label class="radio-label" for="radioHour">Hourly</label>
+						</form>
+						<div class="weather-info-today" id="weather-info-today">
+							<div class="temp-container">
+								<p class="max-temp"></p>
+								<p class="min-temp"></p>
 							</div>
-							<div class="sunset">
-								<img
-									src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunset.svg"
-									alt=""
-									height="55"
-								/>
-								<p class="sunset-text">Sunset</p>
-								<p class="sunset-time"></p>
+							<div class="sun-container">
+								<div class="sunrise">
+									<img
+										src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunrise.svg"
+										alt=""
+										height="55"
+									/>
+									<p class="sunrise-text">Sunrise</p>
+									<p class="sunrise-time"></p>
+								</div>
+								<div class="sunset">
+									<img
+										src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunset.svg"
+										alt=""
+										height="55"
+									/>
+									<p class="sunset-text">Sunset</p>
+									<p class="sunset-time"></p>
+								</div>
 							</div>
 						</div>
-					</div>
-					<table class="weather-info-week hidden" id="weather-info-week"></table>
-					<div class="weather-info-hourly hidden" id="weather-info-hourly">
-					</div>
-				</section>
+						<table class="weather-info-week hidden" id="weather-info-week"></table>
+						<div class="weather-info-hourly hidden" id="weather-info-hourly">
+						</div>
+					</section>
+				</div>
+			</main>
+			<aside>
 				<section>
 					<div class="time-stamp-info" id="time-stamp-info">
 						<div class="time-stamp">
@@ -97,7 +99,7 @@
 				<section>
 					<div class="online-status-info" id="online-status"></div>
 				</section>
-			</main>
+			</aside>
 			<script src="./javascript/errorPopupMessage.js"></script>
 			<script src="./javascript/timeForm.js"></script>
 			<script src="./javascript/searchForecast.js"></script>

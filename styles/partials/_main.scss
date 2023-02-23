@@ -27,7 +27,8 @@
 		background-color: $clr-white;
 		border-radius: $border-radius-S;
 		padding: $padding-S;
-		width: 330px;
+		width: 320px;
+		height: 450px;
 		@include flex($direction: column, $align: center);
 	}
 }
