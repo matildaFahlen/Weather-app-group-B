@@ -28,7 +28,6 @@
 		border-radius: $border-radius-S;
 		padding: $padding-S;
 		width: 320px;
-		height: 450px;
 		@include flex($direction: column, $align: center);
 	}
 }

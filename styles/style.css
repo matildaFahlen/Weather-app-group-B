@@ -78,6 +78,9 @@ div.current-location-div {
     align-content: space-between;
     height: 100vh;
   }
+  .t-w-h-temp-section {
+    height: 440px;
+  }
 }
 .radio-wrapper {
   margin: 1rem;
@@ -274,7 +277,6 @@ img.flag {
   border-radius: 8px;
   padding: 1rem;
   width: 320px;
-  height: 450px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
