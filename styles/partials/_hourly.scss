@@ -3,6 +3,7 @@
 	width: 90%;
 	overscroll-behavior-x: contain;
 	overflow-x: auto;
+	padding-bottom: $padding-S;
 	.div-hourly {
 		@include flex(row);
 	}

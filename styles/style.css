@@ -30,6 +30,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 3;
 }
 
 .error-message {
@@ -60,6 +61,13 @@ div.current-location-div {
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .radio-wrapper {
@@ -96,22 +104,36 @@ input[type=radio]:checked + label {
   justify-content: flex-start;
   align-items: center;
 }
-.temp-container .max-temp, .temp-container .min-temp {
+.temp-container .max-temp,
+.temp-container .min-temp {
   margin: 1rem;
 }
 
 .sun-container {
   display: flex;
 }
-.sun-container .sunrise, .sun-container .sunset {
+.sun-container .sunrise,
+.sun-container .sunset {
   padding: 1rem;
 }
-.sun-container .sunrise .sunrise-time, .sun-container .sunrise .sunset-time, .sun-container .sunset .sunrise-time, .sun-container .sunset .sunset-time {
+.sun-container .sunrise .sunrise-time,
+.sun-container .sunrise .sunset-time,
+.sun-container .sunset .sunrise-time,
+.sun-container .sunset .sunset-time {
   text-align: center;
 }
 
+.weather-info-today {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .weather-info-week {
-  width: 100%;
+  width: 90%;
+  height: 100%;
+  padding-bottom: 1rem;
 }
 
 .precipitation {
@@ -136,6 +158,7 @@ input[type=radio]:checked + label {
   width: 90%;
   overscroll-behavior-x: contain;
   overflow-x: auto;
+  padding-bottom: 1rem;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
@@ -174,6 +197,7 @@ input[type=radio]:checked + label {
 }
 
 .wrapper {
+  position: relative;
   margin-top: 1.5rem;
   border-radius: 12px;
   border-style: none;
@@ -195,10 +219,9 @@ input[type=radio]:checked + label {
 li.search-result {
   cursor: pointer;
   display: flex;
-  width: 330px;
-  height: 40px;
+  align-items: center;
   background-color: hsl(0deg, 0%, 100%);
-  padding-top: 5px;
+  padding: 0.5rem;
   font-size: 16px;
   border-radius: 12px;
   box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
@@ -216,11 +239,19 @@ img.flag {
   margin: 3px 10px 0 10px;
 }
 
-form {
-  width: 100%;
-}
 form input {
   width: 80%;
+}
+
+.header {
+  width: 310px;
+  max-width: 80vw;
+  position: relative;
+}
+
+.outputDiv {
+  position: absolute;
+  width: 100%;
 }
 
 .main {
@@ -233,7 +264,7 @@ form input {
   height: 150;
 }
 .main .current-temp-section {
-  margin-top: 1rem;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -247,7 +278,6 @@ form input {
 }
 .main .current-temp-section .current-location-div {
   margin-top: 0.5rem;
-  width: 140px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -258,6 +288,7 @@ form input {
 }
 .main .t-w-h-temp-section {
   margin-top: 1rem;
+  height: 100%;
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
@@ -293,8 +324,12 @@ form input {
 }
 * .max-temp,
 * .min-temp {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
+}
+* .today-max-temp,
+* .today-min-temp {
+  font-size: 1.5rem;
 }
 
 html:focus-within {
@@ -379,6 +414,7 @@ h6 {
   width: 90%;
   overscroll-behavior-x: contain;
   overflow-x: auto;
+  padding-bottom: 1rem;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
@@ -434,12 +470,16 @@ h6 {
   }
   .main .t-w-h-temp-section {
     margin-top: 0;
-    height: 100%;
+    height: 60vh;
   }
   .canvas-container {
     width: 800%;
   }
   .main .current-temp-section {
     margin-top: 0;
+    width: 30vw;
   }
+}
+.hidden {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
