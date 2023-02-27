@@ -81,6 +81,9 @@ div.current-location-div {
   .t-w-h-temp-section {
     height: 440px;
   }
+  .canvas-container {
+    width: 800%;
+  }
 }
 .radio-wrapper {
   margin: 1rem;
