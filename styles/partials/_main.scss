@@ -29,5 +29,7 @@
 		padding: $padding-S;
 		width: 330px;
 		@include flex($direction: column, $align: center);
+		opacity: 0.95;
+		height: 53vh;
 	}
 }

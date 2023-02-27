@@ -27,13 +27,20 @@
 			<header class="header">
 				<div class="wrapper">
 					<form id="submitForm">
-						<input type="text" id="myInput" class="search-bar" placeholder="Search" autocomplete="off" />
+						<input
+							type="text"
+							id="myInput"
+							class="search-bar"
+							placeholder="Search"
+							autocomplete="off"
+						/>
 						<button type="submit" class="search-button">
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
 					</form>
 				</div>
 				<div class="outputDiv"></div>
+				<button id="image-mode-button" class="image-mode-button"></button>
 			</header>
 			<main class="main">
 				<section class="current-temp-section" id="current-temp-section">
@@ -84,8 +91,7 @@
 						</div>
 					</div>
 					<table class="weather-info-week hidden" id="weather-info-week"></table>
-					<div class="weather-info-hourly hidden" id="weather-info-hourly">
-					</div>
+					<div class="weather-info-hourly hidden" id="weather-info-hourly"></div>
 				</section>
 				<section>
 					<div class="time-stamp-info" id="time-stamp-info">
@@ -98,6 +104,7 @@
 					<div class="online-status-info" id="online-status"></div>
 				</section>
 			</main>
+			<script src="./javascript/imageMode.js"></script>
 			<script src="./javascript/errorPopupMessage.js"></script>
 			<script src="./javascript/timeForm.js"></script>
 			<script src="./javascript/searchForecast.js"></script>

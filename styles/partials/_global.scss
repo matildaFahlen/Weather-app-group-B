@@ -3,6 +3,122 @@ body {
 	background: linear-gradient(180deg, $clr-light, $clr-dark);
 }
 
+.spring {
+	background-image: url(../../assets/test2.png);
+	background-size: cover;
+
+	.current-temp-section {
+		color: rgb(255, 255, 255);
+		text-shadow: 1px 1px 0px rgb(148, 148, 148);
+	}
+
+	.current-location {
+		font-weight: 600;
+	}
+
+	.time-stamp {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.online-status-info {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+}
+
+.summer {
+	background-image: url(../../assets/test.png);
+	background-size: cover;
+
+	.current-temp-section {
+		color: white;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.current-location {
+		font-weight: 600;
+	}
+
+	.time-stamp {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.online-status-info {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+}
+
+.autumn {
+	background-image: url(../../assets/test3.png);
+	background-size: cover;
+
+	.current-temp-section {
+		color: white;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.current-location {
+		font-weight: 600;
+	}
+
+	.time-stamp {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.online-status-info {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+}
+
+.winter {
+	background-image: url(../../assets/test4.png);
+	background-size: cover;
+
+	.current-temp-section {
+		color: white;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.current-location {
+		font-weight: 600;
+	}
+
+	.time-stamp {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+
+	.online-status-info {
+		color: white;
+		font-weight: 700;
+		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+	}
+}
+
+.image-mode-button {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	cursor: pointer;
+	border-radius: 5px;
+	width: 30px;
+	height: 30px;
+	background-color: white;
+	border: none;
+}
+
 .hidden {
 	display: none;
 }

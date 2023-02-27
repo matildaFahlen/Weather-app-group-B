@@ -6,7 +6,7 @@ fetchLocation()
 	.then((locationData) => {
 		const longitude = locationData.coords.longitude;
 		const latitude = locationData.coords.latitude;
-		fetchForecast(longitude, latitude, startDate, endDate);
+		fetchForecast(longitude, latitude, "Europe/Berlin");
 	})
 	.catch((err) => {
 		console.error(err);
@@ -14,7 +14,7 @@ fetchLocation()
 	});
 
 const submitForm = document.getElementById("submitForm");
-const search = document.querySelector('.search-bar');
+const search = document.querySelector(".search-bar");
 
 submitForm.onsubmit = (e) => {
 	e.preventDefault();
@@ -25,7 +25,8 @@ submitForm.onsubmit = (e) => {
 			if (result) {
 				const latitude = result.latitude;
 				const longitude = result.longitude;
-				fetchForecast(longitude, latitude, startDate, endDate);
+				const timezone = result.timezone;
+				fetchForecast(longitude, latitude, timezone);
 				updateCurrentTempSearched(result);
 			} else {
 				errorPopupMessage(`No match for "${currentVal}"`);
@@ -36,22 +37,22 @@ submitForm.onsubmit = (e) => {
 		});
 };
 
-search.addEventListener('input', () => {
+search.addEventListener("input", () => {
 	const currentVal = search.value;
 	if (currentVal.length > 0) {
-	  getSearchedLocation(currentVal)
-		.then((data) => {
-		  const results = data?.results?.filter((result) => result.name && result.country);
-		  if (data && data.results && data.results.length > 0) {
-			updateSearchOptionsUI(results);
-		  } else {
-			outputDiv.innerHTML = '';
-		  }
-		})
-		.catch((err) => {
-		  console.error(err);
-		});
+		getSearchedLocation(currentVal)
+			.then((data) => {
+				const results = data?.results?.filter((result) => result.name && result.country);
+				if (data && data.results && data.results.length > 0) {
+					updateSearchOptionsUI(results);
+				} else {
+					outputDiv.innerHTML = "";
+				}
+			})
+			.catch((err) => {
+				console.error(err);
+			});
 	} else {
-	  outputDiv.innerHTML = '';
+		outputDiv.innerHTML = "";
 	}
-  });
+});
