@@ -6,46 +6,8 @@
     align-items: $align;
 }
 
-// Font-style-1 är utifrån skiss i Figma
+// Font styling
 @mixin font-style-1 {
-    font-family: $quicksand;
-    font-weight: $fw-400;
-    h1 {
-        font-weight: $fw-700;
-        font-size: 2.25rem;
-    }
-    .current-location {
-        font-size: 1.25rem;
-    }
-    .chosen-location {
-        font-weight: $fw-700;
-        font-size: 1.25rem;
-    }
-    .max-temp,
-    .min-temp {
-        font-size: 2rem;
-        font-weight: $fw-500;
-    }
-}
-@mixin font-style-2 {
-    font-family: $quicksand;
-    font-weight: $fw-400;
-    h1 {
-        font-weight: $fw-600;
-        font-size: 2.25rem;
-    }
-    .current-location {
-        text-transform: uppercase;
-        font-weight: $fw-600;
-        font-size: 2rem;
-    }
-    .max-temp,
-    .min-temp {
-        font-size: 1.25rem;
-    }
-
-}
-@mixin font-style-3 {
     font-family: $quicksand;
     font-weight: $fw-400;
     h1 {
@@ -64,30 +26,4 @@
         font-size: 1.25rem;
         font-weight: $fw-600;
     }
-}
-
-//Enkla mixin med olika font-weight
-@mixin font-300 {
-    font-family: $quicksand;
-    font-weight: $fw-300;
-}
-
-@mixin font-400 {
-    font-family: $quicksand;
-    font-weight: $fw-400;
-}
-
-@mixin font-500 {
-    font-family: $quicksand;
-    font-weight: $fw-500;
-}
-
-@mixin font-600 {
-    font-family: $quicksand;
-    font-weight: $fw-600;
-}
-
-@mixin font-700 {
-    font-family: $quicksand;
-    font-weight: $fw-700;
 }
