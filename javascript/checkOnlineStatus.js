@@ -7,10 +7,8 @@ const checkOnlinestatus = async () => {
 setInterval(async () => {
     const result = await checkOnlinestatus();
     if (result === false) {
-        console.log("offline");
         onlineStatus.innerText = "No internet connection";
     } else {
-        console.log("online")
         onlineStatus.innerText = "";
     }
 }, 5000);
