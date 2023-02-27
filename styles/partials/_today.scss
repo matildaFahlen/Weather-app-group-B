@@ -1,17 +1,27 @@
 // Max- and mintemp
 .temp-container {
-    @include flex($direction: column, $align: center);
-	.max-temp, .min-temp {
-        margin: $margin-S;
+	@include flex($direction: column, $align: center);
+	.max-temp,
+	.min-temp {
+		margin: $margin-S;
 	}
 }
 // Sunrise/sunset
 .sun-container {
-    display: flex;
-    .sunrise, .sunset {
-        padding: $padding-S;
-        .sunrise-time, .sunset-time {
-            text-align: center;
-        }
-    }
+	display: flex;
+	.sunrise,
+	.sunset {
+		padding: $padding-S;
+		.sunrise-time,
+		.sunset-time {
+			text-align: center;
+		}
+	}
+}
+
+.weather-info-today {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 }

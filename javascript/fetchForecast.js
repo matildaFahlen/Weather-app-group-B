@@ -1,4 +1,4 @@
-const fetchForecast = (longitude, latitude, timezone) => {
+const fetchForecast = (longitude, latitude) => {
 	const paramsObj = {
 		longitude,
 		latitude,
@@ -6,7 +6,7 @@ const fetchForecast = (longitude, latitude, timezone) => {
 		end_date: endDate,
 		hourly: "temperature_2m",
 		daily: "temperature_2m_max",
-		timezone,
+		timezone: "auto",
 	};
 
 	const searchParams = new URLSearchParams(paramsObj);

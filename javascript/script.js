@@ -6,7 +6,7 @@ fetchLocation()
 	.then((locationData) => {
 		const longitude = locationData.coords.longitude;
 		const latitude = locationData.coords.latitude;
-		fetchForecast(longitude, latitude, "Europe/Berlin");
+		fetchForecast(longitude, latitude);
 	})
 	.catch((err) => {
 		console.error(err);
@@ -25,8 +25,7 @@ submitForm.onsubmit = (e) => {
 			if (result) {
 				const latitude = result.latitude;
 				const longitude = result.longitude;
-				const timezone = result.timezone;
-				fetchForecast(longitude, latitude, timezone);
+				fetchForecast(longitude, latitude);
 				updateCurrentTempSearched(result);
 			} else {
 				errorPopupMessage(`No match for "${currentVal}"`);

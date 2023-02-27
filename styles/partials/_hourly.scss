@@ -1,35 +1,33 @@
 .weather-info-hourly {
-    height: auto;
-    width: 90%;
-    border-radius: $border-radius-S;
-    overscroll-behavior-x: contain;
-    overflow-x: auto; 
-    .div-hourly {
-        @include flex (row);
-        padding: $padding-XS;
-    }
+	height: auto;
+	width: 90%;
+	overscroll-behavior-x: contain;
+	overflow-x: auto;
+	padding-bottom: $padding-S;
+	.div-hourly {
+		@include flex(row);
+	}
 }
 
 .tableBody {
-    @include flex (column);
+	@include flex(column);
 }
 
 .hourly-forcast-ul {
-    @include flex (column, center, center);
-    margin: $margin-XS;
-    width: 2.2rem;
+	@include flex(column, center, center);
+	margin: $margin-XS;
+	width: 2.2rem;
 }
 
 .hourly-weather-icon {
-    height: 40px;
-    width: auto;
+	height: 40px;
+	width: auto;
 }
 
 .precipitation-small {
-    font-size: 0.75rem;
+	font-size: 0.75rem;
 }
 
 .wind-hourly {
-    font-size: 0.75rem;
+	font-size: 0.75rem;
 }
-

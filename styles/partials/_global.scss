@@ -143,6 +143,7 @@ body {
 	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 	transition: top 1s;
 	@include flex($justify: space-between);
+	z-index: 3;
 }
 
 .error-message {
@@ -169,4 +170,8 @@ body {
 
 div.current-location-div {
 	@include flex;
+}
+
+.section-wrapper {
+	@include flex($align: center, $direction: column);
 }

@@ -1,8 +1,6 @@
 const imageModeToggle = document.getElementById("image-mode-button");
 
 const getSeason = () => {
-	return "spring";
-
 	const today = new Date();
 	const month = today.getMonth();
 	if (month === 11 || month < 2) {

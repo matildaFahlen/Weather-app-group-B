@@ -1,5 +1,6 @@
 // SearchBar + SearchButton
 .wrapper {
+	position: relative;
 	margin-top: $margin-M;
 	border-radius: $border-radius-M;
 	border-style: none;
@@ -12,7 +13,7 @@
 		border: 0;
 	}
 	.search-button {
-		margin-right: $margin-XS;
+		margin-left: 5%;
 		background-color: transparent;
 		border: 0;
 	}
@@ -20,15 +21,13 @@
 li.search-result {
 	cursor: pointer;
 	display: flex;
-	width: 300px;
-	height: 40px;
+	align-items: center;
 	background-color: $clr-white;
-	padding-top: 5px;
-	// text-align: center;
+	padding: $padding-XS;
 	font-size: 16px;
 	border-radius: $border-radius-M;
 	box-shadow: 2px 2px 4px $clr-shadow;
-	
+
 	span {
 		margin-top: 2px;
 	}
@@ -39,5 +38,20 @@ li:hover {
 img.flag {
 	height: 25px;
 	margin: 3px 10px 0 10px;
-	
+}
+form {
+	input {
+		width: 80%;
+	}
+}
+
+.header {
+	width: 310px;
+	max-width: 80vw;
+	position: relative;
+}
+
+.outputDiv {
+	position: absolute;
+	width: 100%;
 }

@@ -1,0 +1,26 @@
+@media (min-width: 650px) {
+	.section-wrapper {
+		@include flex(row, space-evenly, center);
+		width: 100vw;
+	}
+
+	.content-wrapper {
+		@include flex(column, space-between, center);
+		align-content: space-between;
+		height: 100vh;
+	}
+
+	.main .t-w-h-temp-section {
+		margin-top: 0;
+		height: 60vh;
+	}
+
+	.canvas-container {
+		width: 800%;
+	}
+
+	.main .current-temp-section {
+		margin-top: 0;
+		width: 30vw;
+	}
+}
