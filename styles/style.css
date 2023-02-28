@@ -493,7 +493,7 @@ h6 {
 }
 .spring .current-temp-section {
   color: hsl(0deg, 0%, 100%);
-  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .spring .current-location {
   font-weight: 600;
@@ -524,7 +524,7 @@ h6 {
 }
 .summer .current-temp-section {
   color: hsl(0deg, 0%, 100%);
-  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .summer .current-location {
   font-weight: 600;
@@ -555,7 +555,7 @@ h6 {
 }
 .autumn .current-temp-section {
   color: hsl(0deg, 0%, 100%);
-  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .autumn .current-location {
   font-weight: 600;
@@ -586,7 +586,7 @@ h6 {
 }
 .winter .current-temp-section {
   color: hsl(0deg, 0%, 100%);
-  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .winter .current-location {
   font-weight: 600;
