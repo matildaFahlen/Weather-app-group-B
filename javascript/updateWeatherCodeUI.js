@@ -168,6 +168,11 @@ weatherCodes = [
 		description: "Partly cloudy night",
 		icon: "partly-cloudy-night",
 	},
+	{
+		id: -4,
+		description: "Fog night",
+		icon: "fog-night",
+	},
 ];
 
 const setWeatherCodeLoading = () => {
@@ -178,13 +183,20 @@ const setWeatherCodeError = () => {
 	weatherImage.src = getWheatherIconUrl(404);
 };
 
-const getWheatherIconUrl = (weatherCode, isDayTime) => {
+/**
+ * Tar in en väderkod och om man ska visa dags-ikoner eller natt-ikoner
+ * (om man inte stoppar in isDayTime blir det automatiskt dags-ikoner)
+ */
+const getWheatherIconUrl = (weatherCode, isDayTime = true) => {
 	if (!isDayTime) {
 		if (weatherCode === 0) {
 			weatherCode = -2;
 		}
 		if (weatherCode === 1 || weatherCode === 2) {
 			weatherCode = -3;
+		}
+		if (weatherCode === 45 || weatherCode === 48) {
+			weatherCode = -4;
 		}
 	}
 	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;

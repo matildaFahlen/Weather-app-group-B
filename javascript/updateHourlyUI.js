@@ -19,13 +19,13 @@ const updateHourlyUI = (forecastData) => {
 	let temps = [];
 
 	for (let i = startHour; i < 24 + startHour; i++) {
-		const time = forecastData.hourly.time[i];
+		const time = forecastData.hourly.time[i].slice(-5);
 		const temp = forecastData.hourly.temperature_2m[i];
 		const precip = forecastData.hourly.precipitation[i];
 		const windSpeed = forecastData.hourly.windspeed_10m[i];
 		const windDirection = forecastData.hourly.winddirection_10m[i];
 
-		labels.push(time.slice(-5));
+		labels.push(time);
 		temps.push(temp);
 
 		const listElement = document.createElement("ul");
@@ -33,7 +33,7 @@ const updateHourlyUI = (forecastData) => {
 
 		const hourElement = document.createElement("li");
 		hourElement.classList.add("time-hourly");
-		hourElement.innerText = `${time.slice(-5)}`;
+		hourElement.innerText = time;
 		listElement.append(hourElement);
 
 		const iconElement = document.createElement("li");
@@ -41,7 +41,7 @@ const updateHourlyUI = (forecastData) => {
 		const iconImage = document.createElement("img");
 		iconImage.classList.add("hourly-weather-icon");
 		const weatherIcon = forecastData.hourly.weathercode[i];
-		const isDayTime = getIsdayTime(forecastData);
+		const isDayTime = getIsdayTime(forecastData, time);
 		iconImage.src = getWheatherIconUrl(weatherIcon, isDayTime);
 		iconElement.append(iconImage);
 		listElement.append(iconElement);
