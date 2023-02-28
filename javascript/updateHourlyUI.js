@@ -35,7 +35,7 @@ const updateHourlyUI = (forecastData) => {
 		hourElement.classList.add("time-hourly");
 		hourElement.innerText = `${time.slice(-5)}`;
 		listElement.append(hourElement);
-		
+
 		const iconElement = document.createElement("li");
 		iconElement.classList.add("weather-icon-hourly");
 		const iconImage = document.createElement("img");
@@ -48,7 +48,7 @@ const updateHourlyUI = (forecastData) => {
 			iconElement.append(iconImage);
 			listElement.append(iconElement);
 		}
-		else if (sunset.slice(11) < hourElement.innerText && weatherIcon === 0) {
+		else if (sunset.slice(11) < hourElement.innerText && weatherIcon === 0 || sunrise.slice(11) > hourElement.innerText && weatherIcon === 0) {
 			iconImage.src = getWheatherIconUrl(-2);
 			iconElement.append(iconImage);
 			listElement.append(iconElement);
