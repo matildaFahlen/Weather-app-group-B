@@ -189,7 +189,7 @@ const setWeatherCodeUI = (forecastData) => {
 	if (sunrise.slice(11) < time && time < sunset.slice(11)) { 
 		weatherImage.src = getWheatherIconUrl(weatherCode);
 	}
-	else if (sunset.slice(11) < time && weatherCode === 0) {
+	else if (sunset.slice(11) < time && weatherCode === 0 || sunrise.slice(11) > time && weatherCode === 0) {
 		weatherImage.src = getWheatherIconUrl(-2);
 	}
 	else {
