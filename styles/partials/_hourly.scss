@@ -1,9 +1,13 @@
 .weather-info-hourly {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	height: auto;
 	width: 90%;
 	overscroll-behavior-x: contain;
 	overflow-x: auto;
-	padding-bottom: $padding-S;
+	padding-bottom: $padding-XS;
+	height: 100%;
 	.div-hourly {
 		@include flex(row);
 	}

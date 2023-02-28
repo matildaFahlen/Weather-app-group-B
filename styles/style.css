@@ -2,110 +2,6 @@ body {
   background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
 }
 
-.spring {
-  background-image: url(../../assets/test2.png);
-  background-size: cover;
-}
-.spring .current-temp-section {
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 0px rgb(148, 148, 148);
-}
-.spring .current-location {
-  font-weight: 600;
-}
-.spring .time-stamp {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.spring .online-status-info {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-
-.summer {
-  background-image: url(../../assets/test.png);
-  background-size: cover;
-}
-.summer .current-temp-section {
-  color: white;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.summer .current-location {
-  font-weight: 600;
-}
-.summer .time-stamp {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.summer .online-status-info {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-
-.autumn {
-  background-image: url(../../assets/test3.png);
-  background-size: cover;
-}
-.autumn .current-temp-section {
-  color: white;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.autumn .current-location {
-  font-weight: 600;
-}
-.autumn .time-stamp {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.autumn .online-status-info {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-
-.winter {
-  background-image: url(../../assets/test4.png);
-  background-size: cover;
-}
-.winter .current-temp-section {
-  color: white;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.winter .current-location {
-  font-weight: 600;
-}
-.winter .time-stamp {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-.winter .online-status-info {
-  color: white;
-  font-weight: 700;
-  text-shadow: 2px 2px 2px rgb(36, 36, 36);
-}
-
-.image-mode-button {
-  position: absolute;
-  top: 1em;
-  right: 1em;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  border: none;
-}
-
-.hidden {
-  display: none;
-}
-
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -233,7 +129,6 @@ input[type=radio]:checked + label {
 .weather-info-week {
   width: 90%;
   height: 100%;
-  padding-bottom: 1rem;
 }
 
 .precipitation {
@@ -254,11 +149,15 @@ input[type=radio]:checked + label {
 }
 
 .weather-info-hourly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: auto;
   width: 90%;
   overscroll-behavior-x: contain;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  height: 100%;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
@@ -344,7 +243,7 @@ form input {
 }
 
 .header {
-  width: 310px;
+  width: 250px;
   max-width: 80vw;
   position: relative;
 }
@@ -352,6 +251,7 @@ form input {
 .outputDiv {
   position: absolute;
   width: 100%;
+  z-index: 4;
 }
 
 .main {
@@ -397,8 +297,6 @@ form input {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  opacity: 0.95;
-  height: 53vh;
 }
 
 *,
@@ -512,11 +410,15 @@ h6 {
   }
 }
 .weather-info-hourly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: auto;
   width: 90%;
   overscroll-behavior-x: contain;
   overflow-x: auto;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  height: 100%;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
@@ -572,7 +474,7 @@ h6 {
   }
   .main .t-w-h-temp-section {
     margin-top: 0;
-    height: 60vh;
+    height: 64vh;
   }
   .canvas-container {
     width: 800%;
@@ -581,7 +483,187 @@ h6 {
     margin-top: 0;
     width: 30vw;
   }
+  .weather-info-hourly {
+    padding-bottom: 0;
+  }
 }
+.spring {
+  background-image: url(../../assets/spring-bg.png);
+  background-size: cover;
+}
+.spring .current-temp-section {
+  color: hsl(0deg, 0%, 100%);
+  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+}
+.spring .current-location {
+  font-weight: 600;
+}
+.spring .time-stamp {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.spring .online-status-info {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.spring .t-w-h-temp-section {
+  opacity: 90%;
+}
+.spring .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.spring .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.summer {
+  background-image: url(../../assets/summer-bg.png);
+  background-size: cover;
+}
+.summer .current-temp-section {
+  color: hsl(0deg, 0%, 100%);
+  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+}
+.summer .current-location {
+  font-weight: 600;
+}
+.summer .time-stamp {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.summer .online-status-info {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.summer .t-w-h-temp-section {
+  opacity: 90%;
+}
+.summer .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.summer .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.autumn {
+  background-image: url(../../assets/autumn-bg.png);
+  background-size: cover;
+}
+.autumn .current-temp-section {
+  color: hsl(0deg, 0%, 100%);
+  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+}
+.autumn .current-location {
+  font-weight: 600;
+}
+.autumn .time-stamp {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.autumn .online-status-info {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.autumn .t-w-h-temp-section {
+  opacity: 90%;
+}
+.autumn .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.autumn .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.winter {
+  background-image: url(../../assets/winter-bg.png);
+  background-size: cover;
+}
+.winter .current-temp-section {
+  color: hsl(0deg, 0%, 100%);
+  text-shadow: 1px 1px 1px rgba(79, 79, 79, 0.5);
+}
+.winter .current-location {
+  font-weight: 600;
+}
+.winter .time-stamp {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.winter .online-status-info {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.winter .t-w-h-temp-section {
+  opacity: 90%;
+}
+.winter .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.winter .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.image-mode-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+}
+
+/* Hide default HTML checkbox */
+.image-mode-button input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(0deg, 0%, 83%);
+  transition: 0.4s;
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(0deg, 0%, 100%);
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
 .hidden {
   display: none;
 }/*# sourceMappingURL=style.css.map */

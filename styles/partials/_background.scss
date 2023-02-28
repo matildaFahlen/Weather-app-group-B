@@ -1,10 +1,10 @@
 .spring {
-	background-image: url(../../assets/test2.png);
+	background-image: url(../../assets/spring-bg.png);
 	background-size: cover;
 
 	.current-temp-section {
-		color: rgb(255, 255, 255);
-		text-shadow: 1px 1px 0px rgb(148, 148, 148);
+		color: $clr-white;
+		text-shadow: 1px 1px 1px rgb(79 79 79 / 50%);
 	}
 
 	.current-location {
@@ -12,25 +12,34 @@
 	}
 
 	.time-stamp {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
 	}
 
 	.online-status-info {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
+	}
+	.t-w-h-temp-section {
+		opacity: 90%;
+	}
+	.wrapper {
+		box-shadow: 2px 2px 2px rgb(115 115 115 / 50%);
+	}
+	.slider {
+		box-shadow: 1.5px 1.5px 2px rgb(85 85 85 / 50%);
 	}
 }
 
 .summer {
-	background-image: url(../../assets/test.png);
+	background-image: url(../../assets/summer-bg.png);
 	background-size: cover;
 
 	.current-temp-section {
-		color: white;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		text-shadow: 1px 1px 1px rgb(79 79 79 / 50%);
 	}
 
 	.current-location {
@@ -38,25 +47,34 @@
 	}
 
 	.time-stamp {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
 	}
 
 	.online-status-info {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
+	}
+	.t-w-h-temp-section {
+		opacity: 90%;
+	}
+	.wrapper {
+		box-shadow: 2px 2px 2px rgb(115 115 115 / 50%);
+	}
+	.slider {
+		box-shadow: 1.5px 1.5px 2px rgb(85 85 85 / 50%);
 	}
 }
 
 .autumn {
-	background-image: url(../../assets/test3.png);
+	background-image: url(../../assets/autumn-bg.png);
 	background-size: cover;
 
 	.current-temp-section {
-		color: white;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		text-shadow: 1px 1px 1px rgb(79 79 79 / 50%);
 	}
 
 	.current-location {
@@ -64,25 +82,34 @@
 	}
 
 	.time-stamp {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
 	}
 
 	.online-status-info {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
+	}
+	.t-w-h-temp-section {
+		opacity: 90%;
+	}
+	.wrapper {
+		box-shadow: 2px 2px 2px rgb(115 115 115 / 50%);
+	}
+	.slider {
+		box-shadow: 1.5px 1.5px 2px rgb(85 85 85 / 50%);
 	}
 }
 
 .winter {
-	background-image: url(../../assets/test4.png);
+	background-image: url(../../assets/winter-bg.png);
 	background-size: cover;
 
 	.current-temp-section {
-		color: white;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		text-shadow: 1px 1px 1px rgb(79 79 79 / 50%);
 	}
 
 	.current-location {
@@ -90,26 +117,81 @@
 	}
 
 	.time-stamp {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
 	}
 
 	.online-status-info {
-		color: white;
-		font-weight: 700;
-		text-shadow: 2px 2px 2px rgb(36, 36, 36);
+		color: $clr-white;
+		font-weight: 600;
+		text-shadow: 0.5px 0.5px 0.5px rgb(0 0 0 / 60%);
+	}
+	.t-w-h-temp-section {
+		opacity: 90%;
+	}
+	.wrapper {
+		box-shadow: 2px 2px 2px rgb(115 115 115 / 50%);
+	}
+
+	.slider {
+		box-shadow: 1.5px 1.5px 2px rgb(85 85 85 / 50%);
 	}
 }
 
 .image-mode-button {
 	position: absolute;
-	top: 1em;
-	right: 1em;
+	top: 0.5em;
+	right: 0.5em;
 	cursor: pointer;
-	border-radius: 5px;
-	width: 30px;
-	height: 30px;
-	background-color: white;
-	border: none;
+	display: inline-block;
+	width: 50px;
+}
+
+/* Hide default HTML checkbox */
+.image-mode-button input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $clr-gray-light;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+	box-shadow: 2px 2px 4px $clr-shadow;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 16px;
+	width: 16px;
+	left: 4px;
+	bottom: 4px;
+	background-color: $clr-white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
 }

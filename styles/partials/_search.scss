@@ -46,7 +46,7 @@ form {
 }
 
 .header {
-	width: 310px;
+	width: 250px;
 	max-width: 80vw;
 	position: relative;
 }
@@ -54,4 +54,5 @@ form {
 .outputDiv {
 	position: absolute;
 	width: 100%;
+	z-index: 4;
 }
