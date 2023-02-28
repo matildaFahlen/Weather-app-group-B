@@ -1,123 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Weather App</title>
-		<link rel="stylesheet" href="styles/style.css" />
-		<script src="https://kit.fontawesome.com/2641d7b74b.js" crossorigin="anonymous"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
-			rel="stylesheet"
-		/>
-		<script src="./javascript/fetchLocation.js"></script>
-	</head>
 
-	<body>
-		<div class="error-message-container" id="error-message-container">
-			<p class="error-message" id="error-message">Test message</p>
-			<button type="submit" class="error-button" id="error-button">
-				<i class="fa-solid fa-xmark"></i>
-			</button>
-		</div>
-		<div class="content-wrapper">
-			<header class="header">
-				<div class="wrapper">
-					<form id="submitForm">
-						<input type="text" id="myInput" class="search-bar" placeholder="Search" autocomplete="off" />
-						<button type="submit" class="search-button">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</button>
-					</form>
-				</div>
-				<div class="outputDiv"></div>
-			</header>
-			<main class="main">
-				<div class="section-wrapper">
-					<section class="current-temp-section" id="current-temp-section">
-						<img id="weather-code" style="width: 150px; height: auto;"/>
-						<h1 class="current-temp"></h1>
-						<div class="current-location-div">
-							<i class="fa-solid fa-location-dot"></i>
-							<p class="current-location">Stockholm</p>
-						</div>
-					</section>
-					<section class="t-w-h-temp-section">
-						<h2 class="chosen-location">Loading...</h2>
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Weather App</title>
+	<link rel="stylesheet" href="styles/style.css" />
+	<script src="https://kit.fontawesome.com/2641d7b74b.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+		rel="stylesheet" />
+	<script src="./javascript/fetchLocation.js"></script>
+</head>
 
-						<form class="radio-wrapper" name="timeForm">
-							<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
-							<label class="radio-label" for="radioToday">Today</label>
-							<input class="radio-btn" type="radio" name="view" id="radioWeek" />
-							<label class="radio-label" for="radioWeek">Week</label>
-							<input class="radio-btn" type="radio" name="view" id="radioHour" />
-							<label class="radio-label" for="radioHour">Hourly</label>
-						</form>
-						<div class="weather-info-today" id="weather-info-today">
-							<div class="temp-container">
-								<p class="max-temp"></p>
-								<p class="min-temp"></p>
-							</div>
-							<div class="sun-container">
-								<div class="sunrise">
-									<img
-										src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunrise.svg"
-										alt=""
-										height="55"
-									/>
-									<p class="sunrise-text">Sunrise</p>
-									<p class="sunrise-time"></p>
-								</div>
-								<div class="sunset">
-									<img
-										src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunset.svg"
-										alt=""
-										height="55"
-									/>
-									<p class="sunset-text">Sunset</p>
-									<p class="sunset-time"></p>
-								</div>
-							</div>
-						</div>
-						<table class="weather-info-week hidden" id="weather-info-week"></table>
-						<div class="weather-info-hourly hidden" id="weather-info-hourly">
-						</div>
-					</section>
-				</div>
-			</main>
-			<aside>
-				<section>
-					<div class="time-stamp-info" id="time-stamp-info">
-						<div class="time-stamp">
-							<p class="time-stamp"></p>
-						</div>
+<body>
+	<div class="error-message-container" id="error-message-container">
+		<p class="error-message" id="error-message">Test message</p>
+		<button type="submit" class="error-button" id="error-button">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+	</div>
+	<div class="content-wrapper">
+		<header class="header">
+			<div class="wrapper">
+				<form id="submitForm">
+					<input type="text" id="myInput" class="search-bar" placeholder="Search" autocomplete="off" />
+					<button type="submit" class="search-button">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</button>
+				</form>
+			</div>
+			<div class="outputDiv"></div>
+		</header>
+		<main class="main">
+			<div class="section-wrapper">
+				<section class="current-temp-section" id="current-temp-section">
+					<img id="weather-code" style="width: 150px; height: auto;" />
+					<h1 class="current-temp"></h1>
+					<div class="current-location-div">
+						<i class="fa-solid fa-location-dot"></i>
+						<p class="current-location">Stockholm</p>
 					</div>
 				</section>
-				<section>
-					<div class="online-status-info" id="online-status"></div>
+				<section class="t-w-h-temp-section">
+					<h2 class="chosen-location">Loading...</h2>
+
+					<form class="radio-wrapper" name="timeForm">
+						<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
+						<label class="radio-label" for="radioToday">Today</label>
+						<input class="radio-btn" type="radio" name="view" id="radioWeek" />
+						<label class="radio-label" for="radioWeek">Week</label>
+						<input class="radio-btn" type="radio" name="view" id="radioHour" />
+						<label class="radio-label" for="radioHour">Hourly</label>
+					</form>
+					<div class="weather-info-today" id="weather-info-today">
+						<div class="temp-container">
+							<p class="max-temp"></p>
+							<p class="min-temp"></p>
+						</div>
+						<div class="sun-container">
+							<div class="sunrise">
+								<img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunrise.svg" alt=""
+									height="55" />
+								<p class="sunrise-text">Sunrise</p>
+								<p class="sunrise-time"></p>
+							</div>
+							<div class="sunset">
+								<img src="https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/sunset.svg" alt=""
+									height="55" />
+								<p class="sunset-text">Sunset</p>
+								<p class="sunset-time"></p>
+							</div>
+						</div>
+					</div>
+					<table class="weather-info-week hidden" id="weather-info-week"></table>
+					<div class="weather-info-hourly hidden" id="weather-info-hourly">
+					</div>
 				</section>
-			</aside>
-			<script src="./javascript/errorPopupMessage.js"></script>
-			<script src="./javascript/timeForm.js"></script>
-			<script src="./javascript/searchForecast.js"></script>
-			<script src="./javascript/updateWeekUI.js"></script>
-			<script src="./javascript/updateTodayUI.js"></script>
-			<script src="./javascript/updateHourlyUI.js"></script>
-			<script src="./javascript/updateWeatherCodeUI.js"></script>
-			<script src="./javascript/updateCurrentTemp.js"></script>
-			<script src="./javascript/getTimeStamp.js"></script>
-			<script src="./javascript/setUIError.js"></script>
-			<script src="./javascript/setUILoading.js"></script>
-			<script src="./javascript/updateForeCastUI.js"></script>
-			<script src="./javascript/setLocationError.js"></script>
-			<script src="./javascript/fetchForecast.js"></script>
-			<script src="./javascript/script.js"></script>
-			<script src="./javascript/positionText.js"></script>
-			<script src="./javascript/checkOnlineStatus.js"></script>
-			<script src="./javascript/updateSearchOptionsUI.js"></script>
-		</div>
-	</body>
+			</div>
+		</main>
+		<aside>
+			<section>
+				<div class="time-stamp-info" id="time-stamp-info">
+					<div class="time-stamp">
+						<p class="time-stamp"></p>
+					</div>
+				</div>
+			</section>
+			<section>
+				<div class="online-status-info" id="online-status"></div>
+			</section>
+		</aside>
+		<script src="./javascript/errorPopupMessage.js"></script>
+		<script src="./javascript/timeForm.js"></script>
+		<script src="./javascript/searchForecast.js"></script>
+		<script src="./javascript/updateWeekUI.js"></script>
+		<script src="./javascript/updateTodayUI.js"></script>
+		<script src="./javascript/updateHourlyUI.js"></script>
+		<script src="./javascript/updateWeatherCodeUI.js"></script>
+		<script src="./javascript/updateCurrentTemp.js"></script>
+		<script src="./javascript/getTimeStamp.js"></script>
+		<script src="./javascript/setUIError.js"></script>
+		<script src="./javascript/setUILoading.js"></script>
+		<script src="./javascript/updateForeCastUI.js"></script>
+		<script src="./javascript/setLocationError.js"></script>
+		<script src="./javascript/fetchForecast.js"></script>
+		<script src="./javascript/script.js"></script>
+		<script src="./javascript/positionText.js"></script>
+		<script src="./javascript/checkOnlineStatus.js"></script>
+		<script src="./javascript/updateSearchOptionsUI.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</div>
+</body>
+
 </html>
