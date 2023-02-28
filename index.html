@@ -32,7 +32,17 @@
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
 					</form>
-				</div>
+				</div>  
+				<nav class="navbar">
+					<ul class="nav-menu">
+					</ul>
+					<div class="nav-menu"></div>
+					<div class="hamburger">
+						<span class="ham"></span>
+						<span class="ham"></span>
+						<span class="ham"></span>
+					</div>
+				</nav>
 				<div class="outputDiv"></div>
 			</header>
 			<main class="main">
@@ -46,8 +56,13 @@
 						</div>
 					</section>
 					<section class="t-w-h-temp-section">
+						<div class="h2-div">
 						<h2 class="chosen-location">Loading...</h2>
-
+						<div class="star">
+							<i class="fa-regular fa-star"></i>
+							
+						</div>
+					</div>
 						<form class="radio-wrapper" name="timeForm">
 							<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
 							<label class="radio-label" for="radioToday">Today</label>
@@ -118,6 +133,7 @@
 			<script src="./javascript/positionText.js"></script>
 			<script src="./javascript/checkOnlineStatus.js"></script>
 			<script src="./javascript/updateSearchOptionsUI.js"></script>
+			<script src="./javascript/favoriteLocations.js"></script>
 		</div>
 	</body>
 </html>

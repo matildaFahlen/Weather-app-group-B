@@ -1,5 +1,6 @@
 const outputDiv = document.querySelector('.outputDiv');
 
+
 const updateSearchOptionsUI = (results) => {
   const list = document.createElement('ul');
   list.classList.add('search-results');
@@ -24,11 +25,13 @@ const updateSearchOptionsUI = (results) => {
       const longitude = result.longitude;
       fetchForecast(longitude, latitude, startDate, endDate);
       updateCurrentTempSearched(result);
+      favoriteResult = result;
     });
     
     list.appendChild(item);
   });
   
   outputDiv.innerHTML = '';
+  star.innerHTML = '<i class="fa-regular fa-star"></i>';
   outputDiv.appendChild(list);
 };

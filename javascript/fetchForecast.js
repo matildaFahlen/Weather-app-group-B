@@ -7,7 +7,7 @@ const fetchForecast = (longitude, latitude, name, startDate, endDate) => {
 		end_date: endDate,
 		hourly: "temperature_2m",
 		daily: "temperature_2m_max",
-		timezone: "Europe/Berlin",
+		timezone: "auto",
 	};
 
 	const searchParams = new URLSearchParams(paramsObj);
@@ -45,6 +45,7 @@ const fetchForecast = (longitude, latitude, name, startDate, endDate) => {
 		.then((forecastData) => {
 			// Update UI with data
 			updateForeCastUI(forecastData);
+			console.log(forecastData);
 		})
 		.catch((err) => {
 			console.error(err);

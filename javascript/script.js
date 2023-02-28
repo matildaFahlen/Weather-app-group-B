@@ -44,6 +44,7 @@ search.addEventListener('input', () => {
 		  const results = data?.results?.filter((result) => result.name && result.country);
 		  if (data && data.results && data.results.length > 0) {
 			updateSearchOptionsUI(results);
+			console.log(results)
 		  } else {
 			outputDiv.innerHTML = '';
 		  }
@@ -55,3 +56,5 @@ search.addEventListener('input', () => {
 	  outputDiv.innerHTML = '';
 	}
   });
+
+
