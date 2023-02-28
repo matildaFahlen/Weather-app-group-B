@@ -41,7 +41,8 @@ const updateHourlyUI = (forecastData) => {
 		const iconImage = document.createElement("img");
 		iconImage.classList.add("hourly-weather-icon");
 		const weatherIcon = forecastData.hourly.weathercode[i];
-		iconImage.src = getWheatherIconUrl(weatherIcon);
+		const isDayTime = getIsdayTime(forecastData);
+		iconImage.src = getWheatherIconUrl(weatherIcon, isDayTime);
 		iconElement.append(iconImage);
 		listElement.append(iconElement);
 
@@ -68,14 +69,13 @@ const updateHourlyUI = (forecastData) => {
 		tableBody.append(listElement);
 	}
 
-
 	const canvasContainer = document.createElement("div");
 	canvasContainer.classList.add("canvas-container");
 	canvasContainer.style.width = "475%";
 
 	const canvas = document.createElement("canvas");
 	canvas.setAttribute("id", "temperature-chart");
-	canvasContainer.append(canvas)
+	canvasContainer.append(canvas);
 	canvas.height = 40;
 
 	function updateChartContainerWidth() {
@@ -90,20 +90,21 @@ const updateHourlyUI = (forecastData) => {
 	updateChartContainerWidth();
 	window.addEventListener("resize", updateChartContainerWidth);
 
-
 	const data = {
 		labels: labels,
-		datasets: [{
-			label: "Temperature",
-			data: temps,
-			fill: false,
-			borderColor: "rgb(75, 192, 192)",
-			tension: 0.1
-		}]
+		datasets: [
+			{
+				label: "Temperature",
+				data: temps,
+				fill: false,
+				borderColor: "rgb(75, 192, 192)",
+				tension: 0.1,
+			},
+		],
 	};
 
 	const config = {
-		type: 'line',
+		type: "line",
 		data: data,
 		options: {
 			scales: {
@@ -111,30 +112,24 @@ const updateHourlyUI = (forecastData) => {
 					ticks: {
 						beginAtZero: true,
 						stepSize: 1,
-					}
+					},
 				},
 				x: {
-					title: {
-					},
+					title: {},
 					grid: {
-						display: false
+						display: false,
 					},
 					ticks: {
 						stepSize: 10,
 						autoSkip: false,
 					},
 					tickWidth: 1,
-				}
-
-			}
+				},
+			},
 		},
 	};
 
 	new Chart(canvas, config);
-
-
-
-
 
 	hourlyContainer.append(tableBody);
 	hourlyContainer.append(canvasContainer);
