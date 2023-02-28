@@ -10,7 +10,6 @@ const clearMessage = () => {
 
 const errorPopupMessage = (message) => {
 	popupText.innerText = message;
-	console.log(popupBox);
 	popupBox.style.top = "12px";
 	setTimeout(() => {
 		clearMessage();
