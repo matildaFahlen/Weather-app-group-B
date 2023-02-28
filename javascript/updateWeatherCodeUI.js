@@ -158,6 +158,11 @@ weatherCodes = [
 		description: "Loading icon",
 		icon: "rainbow-clear",
 	},
+	{
+		id: -2,
+		descriptio: "Clear night moon with stars",
+		icon: "starry-night"
+	}
 ];
 
 const setWeatherCodeLoading = () => {
@@ -176,6 +181,18 @@ const getWheatherIconUrl = (weatherCode) => {
 const setWeatherCodeUI = (forecastData) => {
 	const now = new Date();
 	let hour = now.getHours();
+	let minutes = now.getMinutes();
+	let time = hour + ":" + minutes;
 	const weatherCode = forecastData.hourly.weathercode[hour];
-	weatherImage.src = getWheatherIconUrl(weatherCode);
+	const sunset = forecastData.daily.sunset[0]; // To get moon-image if sun is down 
+	const sunrise = forecastData.daily.sunrise[0];
+	if (sunrise.slice(11) < time && time < sunset.slice(11)) { 
+		weatherImage.src = getWheatherIconUrl(weatherCode);
+	}
+	else if (sunset.slice(11) < time && weatherCode === 0) {
+		weatherImage.src = getWheatherIconUrl(-2);
+	}
+	else {
+		weatherImage.src = getWheatherIconUrl(weatherCode);
+	}
 };
