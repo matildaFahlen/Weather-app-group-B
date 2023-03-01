@@ -507,7 +507,7 @@ h6 {
   }
 }
 .spring {
-  background-image: url(../../assets/spring-bg.png);
+  background-image: url(/assets/spring-bg.png);
   background-size: cover;
 }
 .spring .current-temp-section {
@@ -538,7 +538,7 @@ h6 {
 }
 
 .summer {
-  background-image: url(../../assets/summer-bg.png);
+  background-image: url(assets/summer-bg.png);
   background-size: cover;
 }
 .summer .current-temp-section {
@@ -569,7 +569,7 @@ h6 {
 }
 
 .autumn {
-  background-image: url(../../assets/autumn-bg.png);
+  background-image: url(assets/autumn-bg.png);
   background-size: cover;
 }
 .autumn .current-temp-section {
@@ -600,7 +600,7 @@ h6 {
 }
 
 .winter {
-  background-image: url(../../assets/winter-bg.png);
+  background-image: url(assets/winter-bg.png);
   background-size: cover;
 }
 .winter .current-temp-section {
