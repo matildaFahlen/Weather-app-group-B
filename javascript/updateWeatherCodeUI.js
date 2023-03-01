@@ -161,8 +161,18 @@ weatherCodes = [
 	{
 		id: -2,
 		descriptio: "Clear night moon with stars",
-		icon: "starry-night"
-	}
+		icon: "starry-night",
+	},
+	{
+		id: -3,
+		description: "Partly cloudy night",
+		icon: "partly-cloudy-night",
+	},
+	{
+		id: -4,
+		description: "Fog night",
+		icon: "fog-night",
+	},
 ];
 
 const setWeatherCodeLoading = () => {
@@ -173,7 +183,22 @@ const setWeatherCodeError = () => {
 	weatherImage.src = getWheatherIconUrl(404);
 };
 
-const getWheatherIconUrl = (weatherCode) => {
+/**
+ * Tar in en väderkod och om man ska visa dags-ikoner eller natt-ikoner
+ * (om man inte stoppar in isDayTime blir det automatiskt dags-ikoner)
+ */
+const getWheatherIconUrl = (weatherCode, isDayTime = true) => {
+	if (!isDayTime) {
+		if (weatherCode === 0) {
+			weatherCode = -2;
+		}
+		if (weatherCode === 1 || weatherCode === 2) {
+			weatherCode = -3;
+		}
+		if (weatherCode === 45 || weatherCode === 48) {
+			weatherCode = -4;
+		}
+	}
 	const icon = weatherCodes.find((code) => code.id === weatherCode).icon;
 	return `https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/${icon}.svg`;
 };
@@ -181,18 +206,7 @@ const getWheatherIconUrl = (weatherCode) => {
 const setWeatherCodeUI = (forecastData) => {
 	const now = new Date();
 	let hour = now.getHours();
-	let minutes = now.getMinutes();
-	let time = hour + ":" + minutes;
-	const weatherCode = forecastData.hourly.weathercode[hour];
-	const sunset = forecastData.daily.sunset[0]; // To get moon-image if sun is down 
-	const sunrise = forecastData.daily.sunrise[0];
-	if (sunrise.slice(11) < time && time < sunset.slice(11)) { 
-		weatherImage.src = getWheatherIconUrl(weatherCode);
-	}
-	else if (sunset.slice(11) < time && weatherCode === 0 || sunrise.slice(11) > time && weatherCode === 0) {
-		weatherImage.src = getWheatherIconUrl(-2);
-	}
-	else {
-		weatherImage.src = getWheatherIconUrl(weatherCode);
-	}
+	let weatherCode = forecastData.hourly.weathercode[hour];
+	const isDayTime = getIsdayTime(forecastData);
+	weatherImage.src = getWheatherIconUrl(weatherCode, isDayTime);
 };

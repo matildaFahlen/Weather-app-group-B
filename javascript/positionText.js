@@ -14,7 +14,6 @@ function successFunction(position) {
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
-			console.log(data);
 			const city = data.city;
 			const locality = data.locality;
 			const countryName = data.countryName;

@@ -1,29 +1,34 @@
 // Flexbox
-@mixin flex($direction:row, $justify:flex-start, $align:flex-start) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+@mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
 }
 
 // Font styling
 @mixin font-style-1 {
-    font-family: $quicksand;
-    font-weight: $fw-400;
-    h1 {
-        font-weight: $fw-600;
-        font-size: 2.25rem;
-    }
-    .current-location {
-        text-transform: uppercase;
-        font-size: 1.25rem;
-    }
-    label {
-        text-transform: uppercase;
-    }
-    .max-temp,
-    .min-temp {
-        font-size: 1.25rem;
-        font-weight: $fw-600;
-    }
+	font-family: $quicksand;
+	font-weight: $fw-400;
+	h1 {
+		font-weight: $fw-600;
+		font-size: 2.25rem;
+	}
+	.current-location {
+		text-transform: uppercase;
+		font-size: 1.25rem;
+	}
+	label {
+		text-transform: uppercase;
+	}
+	.max-temp,
+	.min-temp {
+		font-size: 1rem;
+		font-weight: $fw-600;
+	}
+
+	.today-max-temp,
+	.today-min-temp {
+		font-size: 1.5rem;
+	}
 }
