@@ -15,18 +15,17 @@
 		height: 64vh;
 	}
 
-    .canvas-container {
-        width: 800%;
-    }
-    .nav-menu {
-        width: 20%;
-        .favorite-item{
-            cursor: pointer;
-            width: 300px;
-            border-radius: $border-radius-XS;
-        }
-    }
-    
+	.canvas-container {
+		width: 800%;
+	}
+	.nav-menu {
+		width: 21%;
+		.favorite-item {
+			cursor: pointer;
+			width: 300px;
+			border-radius: $border-radius-XS;
+		}
+	}
 
 	.canvas-container {
 		width: 800%;

@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(180deg, hsl(191, 85%, 97%), hsl(185, 77%, 78%));
+  background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
 }
 
 .content-wrapper {
@@ -30,7 +30,7 @@ body {
 }
 
 .error-message {
-  color: hsl(0, 79%, 36%);
+  color: hsl(0deg, 79%, 36%);
   font-weight: 600;
   margin-left: 0.5rem;
 }
@@ -68,13 +68,13 @@ div.current-location-div {
 
 .radio-wrapper {
   margin: 1rem;
-  background-color: hsl(0, 0%, 83%);
+  background-color: hsl(0deg, 0%, 83%);
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
 }
 .radio-wrapper .radio-btn {
   height: 0px;
@@ -82,16 +82,16 @@ div.current-location-div {
 }
 .radio-wrapper .radio-label {
   display: inline-block;
-  background-color: hsl(0, 0%, 83%);
+  background-color: hsl(0deg, 0%, 83%);
   border-radius: 8px;
-  color: hsl(185, 77%, 28%);
+  color: hsl(185deg, 77%, 28%);
   padding: 0.6rem 1rem;
   cursor: pointer;
   margin: 0.2rem;
 }
 
 input[type=radio]:checked + label {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
 }
 
 .temp-container {
@@ -200,9 +200,9 @@ input[type=radio]:checked + label {
   margin-top: 1.5rem;
   border-radius: 12px;
   border-style: none;
-  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
   padding: 0.5rem;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
 }
 .wrapper .search-bar {
   margin-left: 0.5rem;
@@ -219,18 +219,18 @@ li.search-result {
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   padding: 0.5rem;
   font-size: 16px;
   border-radius: 12px;
-  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
 }
 li.search-result span {
   margin-top: 2px;
 }
 
 li:hover {
-  box-shadow: inset 0 0 25px hsl(0, 0%, 83%);
+  box-shadow: inset 0 0 25px hsl(0deg, 0%, 83%);
 }
 
 img.flag {
@@ -290,7 +290,7 @@ form input {
   position: relative;
   margin-top: 1rem;
   height: 100%;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
   width: 320px;
@@ -407,10 +407,12 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+*::before,
+*::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -486,7 +488,7 @@ h6 {
     width: 800%;
   }
   .nav-menu {
-    width: 20%;
+    width: 21%;
   }
   .nav-menu .favorite-item {
     cursor: pointer;
@@ -505,23 +507,23 @@ h6 {
   }
 }
 .spring {
-  background-image: url(../../assets/spring-bg.png);
+  background-image: url(/assets/spring-bg.png);
   background-size: cover;
 }
 .spring .current-temp-section {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .spring .current-location {
   font-weight: 600;
 }
 .spring .time-stamp {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .spring .online-status-info {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -536,23 +538,23 @@ h6 {
 }
 
 .summer {
-  background-image: url(../../assets/summer-bg.png);
+  background-image: url(assets/summer-bg.png);
   background-size: cover;
 }
 .summer .current-temp-section {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .summer .current-location {
   font-weight: 600;
 }
 .summer .time-stamp {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .summer .online-status-info {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -567,23 +569,23 @@ h6 {
 }
 
 .autumn {
-  background-image: url(../../assets/autumn-bg.png);
+  background-image: url(assets/autumn-bg.png);
   background-size: cover;
 }
 .autumn .current-temp-section {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .autumn .current-location {
   font-weight: 600;
 }
 .autumn .time-stamp {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .autumn .online-status-info {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -598,23 +600,23 @@ h6 {
 }
 
 .winter {
-  background-image: url(../../assets/winter-bg.png);
+  background-image: url(assets/winter-bg.png);
   background-size: cover;
 }
 .winter .current-temp-section {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .winter .current-location {
   font-weight: 600;
 }
 .winter .time-stamp {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .winter .online-status-info {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -630,11 +632,11 @@ h6 {
 
 .image-mode-button {
   position: absolute;
-  top: 0.5em;
+  top: 1.5em;
   right: 0.5em;
   cursor: pointer;
   display: inline-block;
-  width: 50px;
+  width: 40px;
 }
 
 .image-mode-button input {
@@ -650,9 +652,9 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: hsl(0, 0%, 83%);
+  background-color: hsl(0deg, 0%, 83%);
   transition: 0.4s;
-  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
 }
 
 .slider:before {
@@ -662,12 +664,12 @@ h6 {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   transition: 0.4s;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(16px);
 }
 
 .slider.round {
@@ -735,7 +737,7 @@ input:checked + .slider:before {
 }
 .navbar .hamburger {
   position: relative;
-  left: 1px;
+  top: -0.5rem;
   cursor: pointer;
   z-index: 11;
 }
