@@ -44,7 +44,6 @@ const fetchForecast = (longitude, latitude) => {
 		.then((forecastData) => {
 			// Update UI with data
 			updateForeCastUI(forecastData);
-			console.log(forecastData);
 		})
 		.catch((err) => {
 			console.error(err);
