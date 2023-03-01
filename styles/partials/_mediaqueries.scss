@@ -1,18 +1,19 @@
 @media (min-width: 650px) {
-    .section-wrapper {
-        @include flex(row, space-evenly, center);
-        width: 100vw;
-    }
+	.section-wrapper {
+		@include flex(row, space-evenly, center);
+		width: 100vw;
+	}
 
-    .content-wrapper {
-        @include flex(column, space-between, center);
-        align-content: space-between;
-        height: 100vh;
-    }
+	.content-wrapper {
+		@include flex(column, space-between, center);
+		align-content: space-between;
+		height: 100vh;
+	}
 
-    .t-w-h-temp-section {
-        height: 440px;
-    }
+	.main .t-w-h-temp-section {
+		margin-top: 0;
+		height: 64vh;
+	}
 
     .canvas-container {
         width: 800%;
@@ -28,4 +29,17 @@
     .star {
     right: 500px !important;
     }
+
+	.canvas-container {
+		width: 800%;
+	}
+
+	.main .current-temp-section {
+		margin-top: 0;
+		width: 30vw;
+	}
+
+	.weather-info-hourly {
+		padding-bottom: 0;
+	}
 }

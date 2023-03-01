@@ -5,7 +5,7 @@
 	}
 	@include flex(column, center, center);
 	.current-temp-section {
-		margin-top: $margin-S;
+		width: 80vw;
 		@include flex($direction: column, $align: center);
 		.current-temp {
 			text-align: center;
@@ -15,7 +15,7 @@
 		}
 		.current-location-div {
 			margin-top: $margin-XS;
-			width: 140px;
+
 			@include flex($align: center, $justify: center);
 			.fa-solid {
 				margin-right: 5px;
@@ -24,6 +24,7 @@
 	}
 	.t-w-h-temp-section {
 		margin-top: $margin-S;
+		height: 100%;
 		background-color: $clr-white;
 		border-radius: $border-radius-S;
 		padding: $padding-S;

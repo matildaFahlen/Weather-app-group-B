@@ -2,17 +2,31 @@ const outputDiv = document.querySelector('.outputDiv');
 let favoriteResult
 
 const updateSearchOptionsUI = (results) => {
-  const list = document.createElement('ul');
-  list.classList.add('search-results');
+	const list = document.createElement("ul");
+	list.classList.add("search-results");
 
-  results.slice(0, 10).forEach((result) => {
-    const item = document.createElement('li');
-    item.classList.add('search-result');
+	results
+		?.filter(
+			(result) =>
+				result.name &&
+				result.latitude &&
+				result.longitude &&
+				result.country &&
+				result.country_code &&
+				result.timezone
+		)
+		.slice(0, 10)
+		.forEach((result) => {
+			const item = document.createElement("li");
+			item.classList.add("search-result");
 
-    const flag = document.createElement('img');
-    flag.setAttribute('src', `https://hatscripts.github.io/circle-flags/flags/${result.country_code.toLowerCase()}.svg`);
-    flag.classList.add('flag');
-    item.appendChild(flag);
+			const flag = document.createElement("img");
+			flag.setAttribute(
+				"src",
+				`https://hatscripts.github.io/circle-flags/flags/${result.country_code.toLowerCase()}.svg`
+			);
+			flag.classList.add("flag");
+			item.appendChild(flag);
 
     const text = document.createElement('span');
     text.textContent = `${result.name}, ${result.country}`;

@@ -2,10 +2,6 @@ body {
   background: linear-gradient(180deg, hsl(191, 85%, 97%), hsl(185, 77%, 78%));
 }
 
-.hidden {
-  display: none;
-}
-
 .content-wrapper {
   display: flex;
   flex-direction: column;
@@ -30,6 +26,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+  z-index: 3;
 }
 
 .error-message {
@@ -62,40 +59,13 @@ div.current-location-div {
   align-items: flex-start;
 }
 
-@media (min-width: 650px) {
-  .section-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100vw;
-  }
-  .content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    align-content: space-between;
-    height: 100vh;
-  }
-  .t-w-h-temp-section {
-    height: 440px;
-  }
-  .canvas-container {
-    width: 800%;
-  }
-  .nav-menu {
-    width: 20%;
-  }
-  .nav-menu .favorite-item {
-    cursor: pointer;
-    width: 300px;
-    border-radius: 4px;
-  }
-  .star {
-    right: 500px !important;
-  }
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+
 .radio-wrapper {
   margin: 1rem;
   background-color: hsl(0, 0%, 83%);
@@ -130,22 +100,35 @@ input[type=radio]:checked + label {
   justify-content: flex-start;
   align-items: center;
 }
-.temp-container .max-temp, .temp-container .min-temp {
+.temp-container .max-temp,
+.temp-container .min-temp {
   margin: 1rem;
 }
 
 .sun-container {
   display: flex;
 }
-.sun-container .sunrise, .sun-container .sunset {
+.sun-container .sunrise,
+.sun-container .sunset {
   padding: 1rem;
 }
-.sun-container .sunrise .sunrise-time, .sun-container .sunrise .sunset-time, .sun-container .sunset .sunrise-time, .sun-container .sunset .sunset-time {
+.sun-container .sunrise .sunrise-time,
+.sun-container .sunrise .sunset-time,
+.sun-container .sunset .sunrise-time,
+.sun-container .sunset .sunset-time {
   text-align: center;
 }
 
+.weather-info-today {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 .weather-info-week {
-  width: 100%;
+  width: 90%;
+  height: 100%;
 }
 
 .precipitation {
@@ -166,18 +149,21 @@ input[type=radio]:checked + label {
 }
 
 .weather-info-hourly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: auto;
   width: 90%;
-  border-radius: 8px;
   overscroll-behavior-x: contain;
   overflow-x: auto;
+  padding-bottom: 0.5rem;
+  height: 100%;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0.5rem;
 }
 
 .tableBody {
@@ -210,6 +196,7 @@ input[type=radio]:checked + label {
 }
 
 .wrapper {
+  position: relative;
   margin-top: 1.5rem;
   border-radius: 12px;
   border-style: none;
@@ -231,10 +218,9 @@ input[type=radio]:checked + label {
 li.search-result {
   cursor: pointer;
   display: flex;
-  width: 330px;
-  height: 40px;
+  align-items: center;
   background-color: hsl(0, 0%, 100%);
-  padding-top: 5px;
+  padding: 0.5rem;
   font-size: 16px;
   border-radius: 12px;
   box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
@@ -252,11 +238,20 @@ img.flag {
   margin: 3px 10px 0 10px;
 }
 
-form {
-  width: 100%;
-}
 form input {
   width: 80%;
+}
+
+.header {
+  width: 250px;
+  max-width: 80vw;
+  position: relative;
+}
+
+.outputDiv {
+  position: absolute;
+  width: 100%;
+  z-index: 4;
 }
 
 .main {
@@ -269,7 +264,7 @@ form input {
   height: 150;
 }
 .main .current-temp-section {
-  margin-top: 1rem;
+  width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -283,7 +278,6 @@ form input {
 }
 .main .current-temp-section .current-location-div {
   margin-top: 0.5rem;
-  width: 140px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -294,6 +288,7 @@ form input {
 }
 .main .t-w-h-temp-section {
   margin-top: 1rem;
+  height: 100%;
   background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
@@ -338,8 +333,12 @@ form input {
 }
 * .max-temp,
 * .min-temp {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
+}
+* .today-max-temp,
+* .today-min-temp {
+  font-size: 1.5rem;
 }
 
 html:focus-within {
@@ -418,18 +417,21 @@ h6 {
   }
 }
 .weather-info-hourly {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   height: auto;
   width: 90%;
-  border-radius: 8px;
   overscroll-behavior-x: contain;
   overflow-x: auto;
+  padding-bottom: 0.5rem;
+  height: 100%;
 }
 .weather-info-hourly .div-hourly {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0.5rem;
 }
 
 .tableBody {
@@ -459,6 +461,229 @@ h6 {
 
 .wind-hourly {
   font-size: 0.75rem;
+}
+
+@media (min-width: 650px) {
+  .section-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+  }
+  .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    align-content: space-between;
+    height: 100vh;
+  }
+  .main .t-w-h-temp-section {
+    margin-top: 0;
+    height: 64vh;
+  }
+  .canvas-container {
+    width: 800%;
+  }
+  .nav-menu {
+    width: 20%;
+  }
+  .nav-menu .favorite-item {
+    cursor: pointer;
+    width: 300px;
+    border-radius: 4px;
+  }
+  .star {
+    right: 500px !important;
+  }
+  .canvas-container {
+    width: 800%;
+  }
+  .main .current-temp-section {
+    margin-top: 0;
+    width: 30vw;
+  }
+  .weather-info-hourly {
+    padding-bottom: 0;
+  }
+}
+.spring {
+  background-image: url(../../assets/spring-bg.png);
+  background-size: cover;
+}
+.spring .current-temp-section {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.spring .current-location {
+  font-weight: 600;
+}
+.spring .time-stamp {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.spring .online-status-info {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.spring .t-w-h-temp-section {
+  opacity: 90%;
+}
+.spring .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.spring .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.summer {
+  background-image: url(../../assets/summer-bg.png);
+  background-size: cover;
+}
+.summer .current-temp-section {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.summer .current-location {
+  font-weight: 600;
+}
+.summer .time-stamp {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.summer .online-status-info {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.summer .t-w-h-temp-section {
+  opacity: 90%;
+}
+.summer .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.summer .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.autumn {
+  background-image: url(../../assets/autumn-bg.png);
+  background-size: cover;
+}
+.autumn .current-temp-section {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.autumn .current-location {
+  font-weight: 600;
+}
+.autumn .time-stamp {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.autumn .online-status-info {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.autumn .t-w-h-temp-section {
+  opacity: 90%;
+}
+.autumn .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.autumn .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.winter {
+  background-image: url(../../assets/winter-bg.png);
+  background-size: cover;
+}
+.winter .current-temp-section {
+  color: hsl(0, 0%, 100%);
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.winter .current-location {
+  font-weight: 600;
+}
+.winter .time-stamp {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.winter .online-status-info {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
+}
+.winter .t-w-h-temp-section {
+  opacity: 90%;
+}
+.winter .wrapper {
+  box-shadow: 2px 2px 2px rgba(115, 115, 115, 0.5);
+}
+.winter .slider {
+  box-shadow: 1.5px 1.5px 2px rgba(85, 85, 85, 0.5);
+}
+
+.image-mode-button {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  cursor: pointer;
+  display: inline-block;
+  width: 50px;
+}
+
+.image-mode-button input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(0, 0%, 83%);
+  transition: 0.4s;
+  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: hsl(0, 0%, 100%);
+  transition: 0.4s;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.hidden {
+  display: none;
 }
 
 .navbar {
