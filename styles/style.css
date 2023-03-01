@@ -491,6 +491,7 @@ h6 {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    min-width: 22%;
   }
   .nav-menu .favorite-item {
     cursor: pointer;
