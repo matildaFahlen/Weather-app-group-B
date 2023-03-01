@@ -1,5 +1,5 @@
 body {
-  background: linear-gradient(180deg, hsl(191deg, 85%, 97%), hsl(185deg, 77%, 78%));
+  background: linear-gradient(180deg, hsl(191, 85%, 97%), hsl(185, 77%, 78%));
 }
 
 .content-wrapper {
@@ -30,7 +30,7 @@ body {
 }
 
 .error-message {
-  color: hsl(0deg, 79%, 36%);
+  color: hsl(0, 79%, 36%);
   font-weight: 600;
   margin-left: 0.5rem;
 }
@@ -68,13 +68,13 @@ div.current-location-div {
 
 .radio-wrapper {
   margin: 1rem;
-  background-color: hsl(0deg, 0%, 83%);
+  background-color: hsl(0, 0%, 83%);
   border-radius: 8px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
 }
 .radio-wrapper .radio-btn {
   height: 0px;
@@ -82,16 +82,16 @@ div.current-location-div {
 }
 .radio-wrapper .radio-label {
   display: inline-block;
-  background-color: hsl(0deg, 0%, 83%);
+  background-color: hsl(0, 0%, 83%);
   border-radius: 8px;
-  color: hsl(185deg, 77%, 28%);
+  color: hsl(185, 77%, 28%);
   padding: 0.6rem 1rem;
   cursor: pointer;
   margin: 0.2rem;
 }
 
 input[type=radio]:checked + label {
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 
 .temp-container {
@@ -200,9 +200,9 @@ input[type=radio]:checked + label {
   margin-top: 1.5rem;
   border-radius: 12px;
   border-style: none;
-  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
   padding: 0.5rem;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
 }
 .wrapper .search-bar {
   margin-left: 0.5rem;
@@ -219,18 +219,18 @@ li.search-result {
   cursor: pointer;
   display: flex;
   align-items: center;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   padding: 0.5rem;
   font-size: 16px;
   border-radius: 12px;
-  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
 }
 li.search-result span {
   margin-top: 2px;
 }
 
 li:hover {
-  box-shadow: inset 0 0 25px hsl(0deg, 0%, 83%);
+  box-shadow: inset 0 0 25px hsl(0, 0%, 83%);
 }
 
 img.flag {
@@ -287,9 +287,10 @@ form input {
   margin-right: 5px;
 }
 .main .t-w-h-temp-section {
+  position: relative;
   margin-top: 1rem;
   height: 100%;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 8px;
   padding: 1rem;
   width: 320px;
@@ -297,6 +298,13 @@ form input {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+}
+.main .t-w-h-temp-section .star {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  color: gold;
+  cursor: pointer;
 }
 
 *,
@@ -399,12 +407,10 @@ h6 {
 
 @media (prefers-reduced-motion: reduce) {
   *,
-*::before,
-*::after {
-    -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
-    -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -479,6 +485,17 @@ h6 {
   .canvas-container {
     width: 800%;
   }
+  .nav-menu {
+    width: 20%;
+  }
+  .nav-menu .favorite-item {
+    cursor: pointer;
+    width: 300px;
+    border-radius: 4px;
+  }
+  .canvas-container {
+    width: 800%;
+  }
   .main .current-temp-section {
     margin-top: 0;
     width: 30vw;
@@ -492,19 +509,19 @@ h6 {
   background-size: cover;
 }
 .spring .current-temp-section {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .spring .current-location {
   font-weight: 600;
 }
 .spring .time-stamp {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .spring .online-status-info {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -523,19 +540,19 @@ h6 {
   background-size: cover;
 }
 .summer .current-temp-section {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .summer .current-location {
   font-weight: 600;
 }
 .summer .time-stamp {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .summer .online-status-info {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -554,19 +571,19 @@ h6 {
   background-size: cover;
 }
 .autumn .current-temp-section {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .autumn .current-location {
   font-weight: 600;
 }
 .autumn .time-stamp {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .autumn .online-status-info {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -585,19 +602,19 @@ h6 {
   background-size: cover;
 }
 .winter .current-temp-section {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .winter .current-location {
   font-weight: 600;
 }
 .winter .time-stamp {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
 .winter .online-status-info {
-  color: hsl(0deg, 0%, 100%);
+  color: hsl(0, 0%, 100%);
   font-weight: 600;
   text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.6);
 }
@@ -633,9 +650,9 @@ h6 {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: hsl(0deg, 0%, 83%);
+  background-color: hsl(0, 0%, 83%);
   transition: 0.4s;
-  box-shadow: 2px 2px 4px hsl(0deg, 0%, 63%);
+  box-shadow: 2px 2px 4px hsl(0, 0%, 63%);
 }
 
 .slider:before {
@@ -645,7 +662,7 @@ h6 {
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: hsl(0deg, 0%, 100%);
+  background-color: hsl(0, 0%, 100%);
   transition: 0.4s;
 }
 
@@ -663,4 +680,71 @@ input:checked + .slider:before {
 
 .hidden {
   display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 15%;
+  padding: 15px 15px;
+  z-index: 10;
+}
+.navbar .nav-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  opacity: 0.9;
+  z-index: 10;
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.navbar .nav-menu.active {
+  display: flex;
+}
+.navbar .nav-item {
+  list-style: none;
+}
+.navbar img.flag {
+  margin-top: 6px;
+}
+.navbar .favorite-item {
+  display: flex;
+  justify-content: flex-start;
+  color: black;
+  top: 100px;
+  margin: 10px 0;
+  font-size: 24px;
+  text-decoration: none;
+  position: relative;
+}
+.navbar .ham {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+.navbar .hamburger {
+  position: relative;
+  left: 1px;
+  cursor: pointer;
+  z-index: 11;
+}
+.navbar .hamburger.active .ham:nth-child(2) {
+  opacity: 0;
+}
+.navbar .hamburger.active .ham:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.navbar .hamburger.active .ham:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }/*# sourceMappingURL=style.css.map */

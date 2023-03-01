@@ -55,3 +55,5 @@ search.addEventListener("input", () => {
 		outputDiv.innerHTML = "";
 	}
 });
+
+

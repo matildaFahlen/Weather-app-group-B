@@ -27,3 +27,10 @@ const updateCurrentTempSearched = (result) => {
 	locationOutput1.innerHTML = ` ${currentLocation}`;
 	locationOutput2.innerHTML = ` ${currentCity}, ${currentCountry}`;
 };
+const updateCurrentTempFavorite = (favoriteResult) => {
+	const currentLocation = favoriteResult.name;
+	const currentCity = favoriteResult.name;
+	const currentCountry = favoriteResult.country;
+	locationOutput1.innerHTML = ` ${currentLocation}`;
+	locationOutput2.innerHTML = ` ${currentCity}, ${currentCountry}`;
+};

@@ -23,6 +23,16 @@
 			<input type="checkbox" id="image-mode-button" />
 			<span class="slider round"></span>
 		</label>
+		<nav class="navbar">
+			<ul class="nav-menu">
+			</ul>
+			<div class="nav-menu"></div>
+			<div class="hamburger">
+				<span class="ham"></span>
+				<span class="ham"></span>
+				<span class="ham"></span>
+			</div>
+		</nav>
 		<!-- <button id="image-mode-button" class="image-mode-button"></button> -->
 		<div class="error-message-container" id="error-message-container">
 			<p class="error-message" id="error-message">Test message</p>
@@ -45,8 +55,9 @@
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</button>
 					</form>
-				</div>
-				<div class="outputDiv"></div>
+				</div>  
+					
+			<div class="outputDiv"></div>
 			</header>
 			<main class="main">
 				<div class="section-wrapper">
@@ -59,9 +70,14 @@
 						</div>
 					</section>
 					<section class="t-w-h-temp-section">
-						<h2 class="chosen-location">Loading...</h2>
-
-						<form class="radio-wrapper" name="timeForm">
+						<div class="star">
+							<i class="fa-regular fa-star"></i>
+							
+							</div>
+					<div class="h2-div">
+					<h2 class="chosen-location">Loading...</h2>
+					</div>
+					<form class="radio-wrapper" name="timeForm">
 							<input class="radio-btn" type="radio" name="view" id="radioToday" checked />
 							<label class="radio-label" for="radioToday">Today</label>
 							<input class="radio-btn" type="radio" name="view" id="radioWeek" />
@@ -131,6 +147,7 @@
 			<script src="./javascript/positionText.js"></script>
 			<script src="./javascript/checkOnlineStatus.js"></script>
 			<script src="./javascript/updateSearchOptionsUI.js"></script>
+			<script src="./javascript/favoriteLocations.js"></script>
 		</div>
 	</body>
 </html>

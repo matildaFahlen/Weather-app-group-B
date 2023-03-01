@@ -23,6 +23,7 @@
 		}
 	}
 	.t-w-h-temp-section {
+		position: relative;
 		margin-top: $margin-S;
 		height: 100%;
 		background-color: $clr-white;
@@ -30,5 +31,13 @@
 		padding: $padding-S;
 		width: 320px;
 		@include flex($direction: column, $align: center);
+		.star{
+			position: absolute;
+			top: 0.5em;
+			right: 0.5em;
+			color: gold;
+			cursor: pointer;
+			
+		}
 	}
 }

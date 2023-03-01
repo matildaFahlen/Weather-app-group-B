@@ -1,4 +1,5 @@
-const outputDiv = document.querySelector(".outputDiv");
+const outputDiv = document.querySelector('.outputDiv');
+let favoriteResult
 
 const updateSearchOptionsUI = (results) => {
 	const list = document.createElement("ul");
@@ -27,23 +28,24 @@ const updateSearchOptionsUI = (results) => {
 			flag.classList.add("flag");
 			item.appendChild(flag);
 
-			const text = document.createElement("span");
-			text.textContent = `${result.name}, ${result.country}`;
-			item.appendChild(text);
-
-			item.addEventListener("click", () => {
-				search.value = "";
-				outputDiv.innerHTML = "";
-				const latitude = result.latitude;
-				const longitude = result.longitude;
-				const timezone = result.timezone;
-				fetchForecast(longitude, latitude, timezone);
-				updateCurrentTempSearched(result);
-			});
-
-			list.appendChild(item);
-		});
-
-	outputDiv.innerHTML = "";
-	outputDiv.appendChild(list);
+    const text = document.createElement('span');
+    text.textContent = `${result.name}, ${result.country}`;
+    item.appendChild(text);
+    
+    item.addEventListener('click', () => {
+      search.value = '';
+      outputDiv.innerHTML = '';
+      const latitude = result.latitude;
+      const longitude = result.longitude;
+      fetchForecast(longitude, latitude, startDate, endDate);
+      updateCurrentTempSearched(result);
+      favoriteResult = result;
+    });
+    
+    list.appendChild(item);
+  });
+  
+  outputDiv.innerHTML = '';
+  star.innerHTML = '<i class="fa-regular fa-star"></i>';
+  outputDiv.appendChild(list);
 };
