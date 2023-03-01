@@ -81,7 +81,7 @@ const updateHourlyUI = (forecastData) => {
 	function updateChartContainerWidth() {
 		const screenWidth = window.innerWidth;
 		if (screenWidth >= 1024) {
-			canvasContainer.style.width = "525%";
+			canvasContainer.style.width = "475%";
 		} else {
 			canvasContainer.style.width = "475%";
 		}
