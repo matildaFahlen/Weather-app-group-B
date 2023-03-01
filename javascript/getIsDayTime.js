@@ -13,7 +13,6 @@ const getIsdayTime = (forecastData, time) => {
 		let minutes = now.getMinutes();
 		time = padDigit(hour) + ":" + padDigit(minutes);
 	}
-	console.log(time);
 	const sunset = forecastData.daily.sunset[0]; // To get moon-image if sun is down
 	const sunrise = forecastData.daily.sunrise[0];
 	return sunrise.slice(11) < time && time < sunset.slice(11);
