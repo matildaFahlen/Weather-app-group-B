@@ -81,6 +81,20 @@ div.current-location-div {
   .t-w-h-temp-section {
     height: 440px;
   }
+  .canvas-container {
+    width: 800%;
+  }
+  .nav-menu {
+    width: 20%;
+  }
+  .nav-menu .favorite-item {
+    cursor: pointer;
+    width: 300px;
+    border-radius: 4px;
+  }
+  .star {
+    right: 500px !important;
+  }
 }
 .radio-wrapper {
   margin: 1rem;
@@ -209,7 +223,7 @@ input[type=radio]:checked + label {
   border: 0;
 }
 .wrapper .search-button {
-  margin-right: 0.5rem;
+  margin-left: 5%;
   background-color: transparent;
   border: 0;
 }
@@ -217,7 +231,7 @@ input[type=radio]:checked + label {
 li.search-result {
   cursor: pointer;
   display: flex;
-  width: 300px;
+  width: 330px;
   height: 40px;
   background-color: hsl(0, 0%, 100%);
   padding-top: 5px;
@@ -236,6 +250,13 @@ li:hover {
 img.flag {
   height: 25px;
   margin: 3px 10px 0 10px;
+}
+
+form {
+  width: 100%;
+}
+form input {
+  width: 80%;
 }
 
 .main {

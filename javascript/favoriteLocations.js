@@ -11,7 +11,7 @@ const star = document.querySelector('.star');
 
 let favoriteResults = [];
 
-star.addEventListener('click', () => {
+star.addEventListener('click', (event) => {
   
   if (star.innerHTML.trim() === '<i class="fa-regular fa-star"></i>') {
     
@@ -31,7 +31,7 @@ star.addEventListener('click', () => {
     newItem.addEventListener('click', () => {
       
       const index = Array.from(navUl.children).indexOf(newItem);
-      const favoriteResult = favoriteResults[index];
+      favoriteResult = favoriteResults[index];
       const latitude = favoriteResult.latitude;
       const longitude = favoriteResult.longitude;
       fetchForecast(longitude, latitude, startDate, endDate);
@@ -46,7 +46,7 @@ star.addEventListener('click', () => {
     favoriteResults.push(favoriteResult);
     console.log(favoriteResults)
   }  else {
-    // remove location from favorites
+    
     const items = Array.from(navUl.children);
     for (let i = 0; i < items.length; i++) {
       const item = items[i];

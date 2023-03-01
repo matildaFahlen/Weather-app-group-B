@@ -3,6 +3,7 @@
         @include flex(row, space-evenly, center);
         width: 100vw;
     }
+
     .content-wrapper {
         @include flex(column, space-between, center);
         align-content: space-between;
@@ -12,5 +13,19 @@
     .t-w-h-temp-section {
         height: 440px;
     }
-    
+
+    .canvas-container {
+        width: 800%;
+    }
+    .nav-menu {
+        width: 20%;
+        .favorite-item{
+            cursor: pointer;
+            width: 300px;
+            border-radius: $border-radius-XS;
+        }
+    }
+    .star {
+    right: 500px !important;
+    }
 }

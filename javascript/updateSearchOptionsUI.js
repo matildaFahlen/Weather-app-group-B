@@ -1,5 +1,5 @@
 const outputDiv = document.querySelector('.outputDiv');
-
+let favoriteResult
 
 const updateSearchOptionsUI = (results) => {
   const list = document.createElement('ul');
