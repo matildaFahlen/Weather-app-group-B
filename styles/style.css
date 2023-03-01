@@ -287,6 +287,7 @@ form input {
   margin-right: 5px;
 }
 .main .t-w-h-temp-section {
+  position: relative;
   margin-top: 1rem;
   height: 100%;
   background-color: hsl(0, 0%, 100%);
@@ -298,14 +299,12 @@ form input {
   justify-content: flex-start;
   align-items: center;
 }
-.main .t-w-h-temp-section .h2-div {
-  display: flex;
-}
-.main .t-w-h-temp-section .h2-div .star {
+.main .t-w-h-temp-section .star {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
   color: gold;
   cursor: pointer;
-  position: absolute;
-  right: 50px;
 }
 
 *,
@@ -493,9 +492,6 @@ h6 {
     cursor: pointer;
     width: 300px;
     border-radius: 4px;
-  }
-  .star {
-    right: 500px !important;
   }
   .canvas-container {
     width: 800%;
@@ -739,6 +735,7 @@ input:checked + .slider:before {
 }
 .navbar .hamburger {
   position: relative;
+  left: 1px;
   cursor: pointer;
   z-index: 11;
 }
