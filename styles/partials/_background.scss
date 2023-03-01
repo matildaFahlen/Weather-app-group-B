@@ -141,11 +141,11 @@
 
 .image-mode-button {
 	position: absolute;
-	top: 0.5em;
+	top: 1.5em;
 	right: 0.5em;
 	cursor: pointer;
 	display: inline-block;
-	width: 50px;
+	width: 40px;
 }
 
 .image-mode-button input {
@@ -180,9 +180,9 @@
 }
 
 input:checked + .slider:before {
-	-webkit-transform: translateX(26px);
-	-ms-transform: translateX(26px);
-	transform: translateX(26px);
+	-webkit-transform: translateX(20px);
+	-ms-transform: translateX(16px);
+	transform: translateX(16px);
 }
 
 .slider.round {

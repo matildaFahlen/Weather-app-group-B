@@ -1,69 +1,67 @@
-
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 15px;
-    left: 0;
-    width: 15%;
-    padding: 15px 15px;
-    z-index: 10;
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: #fff;
-        opacity: 0.9;
-        z-index: 10;
-        display: none;
-        align-items: flex-start;
-        flex-direction: column;
-    }
-    .nav-menu.active {
-        display: flex;
-    }
-    .nav-item {
-        list-style: none;
-    }
-    img.flag {
-        margin-top:6px;
-    }
-    .favorite-item {
-        display: flex;
-        justify-content: flex-start;
-        color: black;
-        top: 100px;
-        margin: 10px 0;
-        font-size: 24px;
-        text-decoration: none;
-        position: relative;
-       }
-       .ham {
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color:   black;
-    }
-    .hamburger {
-        position: relative;
-        left: 1px;
-        cursor: pointer;
-        z-index: 11;
-    }
-    .hamburger.active .ham:nth-child(2){
-        opacity: 0;
-    }
-    .hamburger.active .ham:nth-child(1){
-        transform: translateY(8px) rotate(45deg);
-    }
-    .hamburger.active .ham:nth-child(3){
-        transform: translateY(-8px) rotate(-45deg);
-    }
-    }
-      
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	top: 15px;
+	left: 0;
+	width: 15%;
+	padding: 15px 15px;
+	z-index: 10;
+	.nav-menu {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: #fff;
+		opacity: 0.9;
+		z-index: 10;
+		display: none;
+		align-items: flex-start;
+		flex-direction: column;
+	}
+	.nav-menu.active {
+		display: flex;
+	}
+	.nav-item {
+		list-style: none;
+	}
+	img.flag {
+		margin-top: 6px;
+	}
+	.favorite-item {
+		display: flex;
+		justify-content: flex-start;
+		color: black;
+		top: 100px;
+		margin: 10px 0;
+		font-size: 24px;
+		text-decoration: none;
+		position: relative;
+	}
+	.ham {
+		display: block;
+		width: 25px;
+		height: 3px;
+		margin: 5px auto;
+		-webkit-transition: all 0.3s ease-in-out;
+		transition: all 0.3s ease-in-out;
+		background-color: black;
+	}
+	.hamburger {
+		position: relative;
+		top: -0.5rem;
+		cursor: pointer;
+		z-index: 11;
+	}
+	.hamburger.active .ham:nth-child(2) {
+		opacity: 0;
+	}
+	.hamburger.active .ham:nth-child(1) {
+		transform: translateY(8px) rotate(45deg);
+	}
+	.hamburger.active .ham:nth-child(3) {
+		transform: translateY(-8px) rotate(-45deg);
+	}
+}
